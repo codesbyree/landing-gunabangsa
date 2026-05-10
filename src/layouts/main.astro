@@ -1,5 +1,7 @@
 ---
 import "@/styles/global.css"
+
+import Navigation from "@/components/shared/navigation"
 ---
 
 <html lang="en">
@@ -16,6 +18,7 @@ import "@/styles/global.css"
     />
   </head>
   <body>
+    <Navigation client:load />
     <slot />
   </body>
 </html>
