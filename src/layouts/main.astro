@@ -2,6 +2,7 @@
 import "@/styles/global.css"
 
 import Navigation from "@/components/shared/navigation"
+import Footer from "@/components/shared/footer.astro"
 ---
 
 <html lang="en">
@@ -20,5 +21,6 @@ import Navigation from "@/components/shared/navigation"
   <body>
     <Navigation client:load />
     <slot />
+    <Footer />
   </body>
 </html>

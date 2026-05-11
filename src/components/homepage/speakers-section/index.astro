@@ -1,0 +1,31 @@
+---
+import { AspectRatio } from "@/components/ui/aspect-ratio"
+import SectionTitle from "@/components/shared/section-title.astro"
+import SpeakerCardRenderer from "./speaker-card-renderer.tsx"
+---
+
+<section
+  class="relative flex w-full justify-center overflow-hidden bg-white px-4"
+>
+  <div class="absolute top-[-50%] left-0 z-1 w-full">
+    <AspectRatio ratio={1 / 1}>
+      <div class="h-full w-full rounded-br-full rounded-bl-full opacity-35">
+        <img
+          src="/assets/images/round-pattern-1-xl.png"
+          alt=""
+          class="h-full w-full"
+        />
+      </div>
+    </AspectRatio>
+  </div>
+
+  <div class="relative z-10 flex w-full max-w-7xl flex-1 flex-col py-26">
+    <SectionTitle
+      title="Leading Experts and Global Innovators"
+      subtitle="SPEAKERS"
+      description="Get inspired by a curated selection of speakers spanning the full spectrum of modern medicine, biomedical engineering, and health science practice."
+    />
+
+    <SpeakerCardRenderer />
+  </div>
+</section>

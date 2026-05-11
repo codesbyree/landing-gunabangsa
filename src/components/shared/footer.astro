@@ -1,0 +1,110 @@
+---
+import {
+  Call02Icon,
+  InstagramIcon,
+  Mail01Icon,
+} from "@hugeicons/core-free-icons"
+import { HugeiconsIcon } from "@hugeicons/react"
+---
+
+<footer id="footer" class="bg-red-950 pt-20 pb-12">
+  <div class="mx-auto max-w-7xl px-6">
+    <div class="mb-20 grid gap-10 md:grid-cols-4">
+      <div class="md:col-span-2">
+        <div class="mb-8 flex items-center gap-3">
+          <img
+            src="/assets/images/conference-logo.png"
+            alt="logo"
+            class="h-14 w-40"
+          />
+        </div>
+
+        <p class="mb-10 max-w-md leading-relaxed font-medium text-red-100/70">
+          The 1st HEALTHMED-IC is an international scientific conference hosted
+          by{" "}
+          <strong class="text-red-50">
+            STIKES Guna Bangsa Yogyakarta, Indonesia
+          </strong>
+          , bringing together global academic and healthcare communities.
+        </p>
+        <div class="flex gap-3">
+          <a
+            href="https://www.instagram.com/healthmedic2026/"
+            target="_blank"
+            class="flex h-10.5 w-10.5 cursor-pointer items-center justify-center rounded-full bg-red-300 transition-transform hover:-translate-y-1"
+          >
+            <HugeiconsIcon
+              icon={InstagramIcon}
+              className="h-4.5 w-4.5 text-red-950"
+            />
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="mb-6 text-lg font-semibold tracking-tight text-slate-50">
+          Quick Actions
+        </h4>
+        <ul class="space-y-4">
+          <li>
+            <a href="/" class="text-red-100/70 transition hover:text-red-100">
+              Abstract Submission
+            </a>
+          </li>
+          <li>
+            <a
+              href="/program"
+              class="text-red-100/70 transition hover:text-red-100"
+            >
+              Conference Program
+            </a>
+          </li>
+          <li>
+            <a href="/" class="text-red-100/70 transition hover:text-red-100">
+              Ethical Guidelines
+            </a>
+          </li>
+          <li>
+            <a
+              href="/committee"
+              class="text-red-100/70 transition hover:text-red-100"
+            >
+              Committees
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="mb-6 text-lg font-semibold tracking-tight text-slate-50">
+          Contact
+        </h4>
+        <div class="space-y-4">
+          <a
+            href="tel:0000000000"
+            class="flex items-center gap-4 text-red-100/70 transition hover:text-red-100"
+          >
+            <HugeiconsIcon icon={Call02Icon} className="h-4 w-4 text-red-50" />
+            <span>(000) 000-0000</span>
+          </a>
+          <a
+            href="mailto:HEALTHMED-IC@gunabangsa.ac.id"
+            class="flex items-center gap-4 text-red-100/70 transition hover:text-red-100"
+          >
+            <HugeiconsIcon icon={Mail01Icon} className="h-4 w-4 text-red-50" />
+            <span>HEALTHMED-IC@gunabangsa.ac.id</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="flex flex-col items-center justify-between border-t border-red-100/70 pt-12 text-xs font-black tracking-widest text-slate-300 uppercase md:flex-row"
+    >
+      <p>
+        © 2026 The 1st HEALTHMED-IC — STIKES Guna Bangsa Yogyakarta. All rights
+        reserved.
+      </p>
+    </div>
+  </div>
+</footer>

@@ -1,9 +1,25 @@
 ---
 import Layout from "@/layouts/main.astro"
+import HeroSection from "@/components/homepage/hero-section/index.astro"
+import WelcomeSection from "@/components/homepage/welcome-section.astro"
+import ResearchTracks from "@/components/homepage/research-tracks-section/index.astro"
+import { Separator } from "@/components/ui/separator.tsx"
+import PublicationOpportunitySection from "@/components/homepage/publication-opportunity-section.astro"
+import SpeakersSection from "@/components/homepage/speakers-section/index.astro"
+import TimelineSection from "@/components/homepage/timeline-section/index.astro"
 ---
 
 <Layout>
   <main>
-    <h1>Hello from Homepage</h1>
+    <HeroSection />
+    <WelcomeSection />
+    <Separator />
+    <PublicationOpportunitySection />
+    <Separator />
+    <ResearchTracks />
+    <Separator />
+    <SpeakersSection />
+    <Separator />
+    <TimelineSection />
   </main>
 </Layout>

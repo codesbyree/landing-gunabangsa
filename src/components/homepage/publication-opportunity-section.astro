@@ -1,0 +1,64 @@
+---
+import SectionTitleAlt from "@/components/shared/section-title-alt.astro"
+import { AspectRatio } from "../ui/aspect-ratio"
+---
+
+<section class="flex w-full justify-center overflow-hidden bg-white px-4">
+  <div class="flex w-full max-w-7xl flex-1 flex-col py-26">
+    <SectionTitleAlt title="Publication Opportunity" subtitle="INFORMATION" />
+
+    <div
+      class="relative grid grid-cols-1 gap-4 md:grid-cols-[.55fr_1fr] md:gap-10 lg:gap-20"
+    >
+      <div class="h-full w-full">
+        <div
+          class="absolute top-1/2 -left-80 z-1 hidden w-full max-w-3xl -translate-y-1/2 md:block"
+        >
+          <AspectRatio ratio={1 / 1}>
+            <img src="/assets/images/books-ilustration.jpg" alt="" />
+          </AspectRatio>
+        </div>
+      </div>
+
+      <div
+        class="relative z-10 flex flex-col gap-4 text-slate-600 md:text-justify"
+      >
+        <p>
+          As part of our commitment to enhancing the quality and visibility of
+          scholarly work, this conference collaborates with the ETLTC Conference
+          Series for proceedings publication. Selected articles that have
+          undergone peer review and fall within the scope of the ETLTC
+          Conference Series will be published in their proceedings.
+        </p>
+        <p>
+          The ETLTC Conference Series has established partnerships with
+          Engineering Proceedings (MDPI) and AIP Publishing, both indexed by
+          Scopus, offering a broad opportunity for researchers to publish their
+          work in reputable international outlets.
+        </p>
+        <p>
+          Since not all research fields can be accommodated under the ETLTC
+          Conference Series, the organizing committee is currently establishing
+          contracts with additional publishers, including Scopus-indexed
+          proceedings and reputable journals, in accordance with the relevance
+          of specific research fields.
+        </p>
+        <p>
+          Detailed information regarding the publication aims and the list of
+          official publication outlets will be announced on the website once the
+          contracts with the respective publishers have been finalized.
+        </p>
+
+        <div class="w-full max-w-md">
+          <AspectRatio ratio={19 / 7}>
+            <img
+              src="/assets/images/publications.png"
+              alt=""
+              class="h-full w-full"
+            />
+          </AspectRatio>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

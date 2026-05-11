@@ -1,0 +1,13 @@
+---
+const { title, subtitle } = Astro.props
+---
+
+<div
+  class="relative z-10 mb-8 grid grid-cols-1 gap-4 md:grid-cols-[.55fr_1fr] md:gap-10 lg:gap-20"
+>
+  <span class="text-xs font-medium tracking-wider">{subtitle}</span>
+
+  <h2 class="text-xl font-semibold text-red-950 md:text-2xl">
+    {title}
+  </h2>
+</div>

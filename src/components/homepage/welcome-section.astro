@@ -1,0 +1,126 @@
+---
+import SectionTitleAlt from "@/components/shared/section-title-alt.astro"
+import {
+  MessageMultipleIcon,
+  PresentationPodiumFreeIcons,
+  SpeechIcon,
+  UserSwitchIcon,
+} from "@hugeicons/core-free-icons"
+import { HugeiconsIcon } from "@hugeicons/react"
+import { AspectRatio } from "../ui/aspect-ratio"
+---
+
+<section class="flex w-full justify-center overflow-hidden bg-red-50 px-4">
+  <div class="flex w-full max-w-7xl flex-1 flex-col py-26">
+    <SectionTitleAlt
+      title="Welcome to The 1st HEALTHMED-IC"
+      subtitle="INVITATION"
+    />
+
+    <div
+      class="relative grid grid-cols-1 gap-4 md:grid-cols-[.55fr_1fr] md:gap-10 lg:gap-20"
+    >
+      <div class="h-full w-full">
+        <div
+          class="absolute top-1/2 -left-80 z-1 hidden w-full max-w-3xl -translate-y-1/2 md:block"
+        >
+          <AspectRatio ratio={1 / 1}>
+            <img src="/assets/images/venue-ilustration.jpg" alt="" />
+          </AspectRatio>
+        </div>
+      </div>
+
+      <div
+        class="relative z-10 flex flex-col gap-4 bg-red-50/80 text-slate-600 md:text-justify"
+      >
+        <p>
+          It is with great honor and sincere pleasure that we invite you to
+          attend The 1st HEALTHMED-IC (Healthcare Excellence and Advancements in
+          Life Treatment & Human Medicine – International Conference).
+        </p>
+        <p>
+          This prestigious international conference is designed as a scientific
+          forum that brings together academics, clinicians, researchers,
+          practitioners, policymakers, and students to share knowledge, research
+          findings, and innovative ideas in the field of healthcare and human
+          medicine.
+        </p>
+        <p>
+          In this rapidly evolving era, healthcare faces complex global
+          challenges — from emerging diseases and technological disruption to
+          personalized medicine and sustainable health systems. Through The 1st
+          HEALTHMED-IC, we aim to foster interdisciplinary collaboration,
+          promote cutting-edge research, and encourage meaningful discussions
+          that contribute to healthcare excellence and advancements in life
+          treatment.
+        </p>
+        <p>This conference will feature:</p>
+
+        <div class="grid grid-cols-1 gap-2 text-left md:grid-cols-2">
+          <div
+            class="flex gap-3 rounded-md border border-red-300 bg-red-700 p-3 text-red-50"
+          >
+            <HugeiconsIcon
+              icon={SpeechIcon}
+              size={24}
+              color="currentColor"
+              className="shrink-0"
+            />
+
+            <p>
+              Inspiring keynote speeches from internationally recognized experts
+            </p>
+          </div>
+
+          <div
+            class="flex gap-3 rounded-md border border-red-300 bg-red-700 p-3 text-red-50"
+          >
+            <HugeiconsIcon
+              icon={PresentationPodiumFreeIcons}
+              size={24}
+              color="currentColor"
+              className="shrink-0"
+            />
+            <p>Oral and poster presentations</p>
+          </div>
+
+          <div
+            class="flex gap-3 rounded-md border border-red-300 bg-red-700 p-3 text-red-50"
+          >
+            <HugeiconsIcon
+              icon={MessageMultipleIcon}
+              size={24}
+              color="currentColor"
+              className="shrink-0"
+            />
+            <p>Panel discussions on current healthcare issues</p>
+          </div>
+
+          <div
+            class="flex gap-3 rounded-md border border-red-300 bg-red-700 p-3 text-red-50"
+          >
+            <HugeiconsIcon
+              icon={UserSwitchIcon}
+              size={24}
+              color="currentColor"
+              className="shrink-0"
+            />
+            <p>Networking opportunities for global collaboration</p>
+          </div>
+        </div>
+
+        <p>
+          We warmly welcome researchers and professionals in the fields of
+          medicine, nursing, public health, pharmacy, biomedical sciences,
+          clinical research, health technology, and related disciplines to
+          submit their best papers and join this remarkable academic gathering.
+          Your presence and contribution will not only enrich the scientific
+          discourse but also strengthen international partnerships toward
+          improving global health outcomes. Let us come together to innovate,
+          collaborate, and advance healthcare for a better and healthier future.
+          We look forward to welcoming you to The 1st HEALTHMED-IC.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
