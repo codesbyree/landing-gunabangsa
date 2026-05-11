@@ -1,0 +1,27 @@
+---
+import DesktopNavigation from "./desktop-navigation"
+import MobileNavigation from "./mobile-navigation"
+---
+
+<div
+  class="fixed top-0 left-0 z-1000 flex w-full justify-center bg-slate-950/20 backdrop-blur-xs"
+>
+  <div
+    class="flex w-full max-w-7xl items-center justify-between gap-4 p-1 px-4 lg:p-0"
+  >
+    <a href="/">
+      <img
+        src="/assets/images/conference-logo.png"
+        alt="logo"
+        class="h-8 w-19 mix-blend-difference md:h-12 md:w-34"
+      />
+    </a>
+
+    <div class="hidden lg:block">
+      <DesktopNavigation client:load />
+    </div>
+    <div class="block lg:hidden">
+      <MobileNavigation client:load />
+    </div>
+  </div>
+</div>

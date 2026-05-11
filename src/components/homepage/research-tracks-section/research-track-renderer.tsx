@@ -25,7 +25,7 @@ const researchTracks = [
     icon: (
       <HugeiconsIcon
         icon={StethoscopeIcon}
-        size={24}
+        size={28}
         className="text-red-600"
         color="currentColor"
       />
@@ -45,7 +45,7 @@ const researchTracks = [
     icon: (
       <HugeiconsIcon
         icon={NanoTechnologyIcon}
-        size={24}
+        size={28}
         className="text-red-600"
         color="currentColor"
       />
@@ -64,7 +64,7 @@ const researchTracks = [
     icon: (
       <HugeiconsIcon
         icon={AiBrain03Icon}
-        size={24}
+        size={28}
         className="text-red-600"
         color="currentColor"
       />
@@ -83,7 +83,7 @@ const researchTracks = [
     icon: (
       <HugeiconsIcon
         icon={MedicineBottle01Icon}
-        size={24}
+        size={28}
         className="text-red-600"
         color="currentColor"
       />
@@ -102,7 +102,7 @@ const researchTracks = [
     icon: (
       <HugeiconsIcon
         icon={Leaf01Icon}
-        size={24}
+        size={28}
         className="text-red-600"
         color="currentColor"
       />
@@ -120,7 +120,7 @@ const researchTracks = [
     icon: (
       <HugeiconsIcon
         icon={Baby01Icon}
-        size={24}
+        size={28}
         className="text-red-600"
         color="currentColor"
       />
@@ -138,7 +138,7 @@ const researchTracks = [
     icon: (
       <HugeiconsIcon
         icon={Brain01Icon}
-        size={24}
+        size={28}
         className="text-red-600"
         color="currentColor"
       />
@@ -158,7 +158,7 @@ const researchTracks = [
     icon: (
       <HugeiconsIcon
         icon={HealthIcon}
-        size={24}
+        size={28}
         className="text-red-600"
         color="currentColor"
       />

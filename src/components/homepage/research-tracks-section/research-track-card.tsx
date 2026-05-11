@@ -36,7 +36,7 @@ export default function ResearchTrackCard({
           {items.map((item, index) => (
             <div
               key={index}
-              className="flex gap-2 transition-opacity hover:opacity-75"
+              className="flex gap-2 opacity-75 transition-opacity hover:opacity-60"
             >
               <HugeiconsIcon
                 icon={RecordIcon}
