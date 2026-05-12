@@ -1,9 +1,15 @@
 ---
 import Layout from "@/layouts/main.astro"
+import Breadcrumbs from "@/components/shared/breadcrumbs.astro"
+import SponsorSection from "@/components/sponsor-page/sponsor-section.astro"
 ---
 
 <Layout>
+  <Breadcrumbs
+    pageName="Our Partners"
+    coverImageUrl="/assets/images/hero-carousel/slide - 2.webp"
+  />
   <main>
-    <h1>Hello from Our Partners Page</h1>
+    <SponsorSection />
   </main>
 </Layout>
