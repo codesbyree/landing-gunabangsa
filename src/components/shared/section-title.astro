@@ -2,7 +2,9 @@
 const { title, subtitle, description } = Astro.props
 ---
 
-<div class="mb-8 grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-10 lg:gap-20">
+<div
+  class="mb-8 grid grid-cols-1 items-start gap-4 md:grid-cols-2 md:gap-10 lg:gap-20"
+>
   <div class="flex flex-col-reverse">
     <h2 class="text-xl font-semibold text-red-950 md:text-2xl">
       {title}

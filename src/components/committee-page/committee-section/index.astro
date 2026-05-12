@@ -1,0 +1,18 @@
+---
+import SectionTitle from "@/components/shared/section-title.astro"
+import CommitteeCardRenderer from "./committee-card-renderer.tsx"
+---
+
+<section
+  class="flex min-h-dvh w-full justify-center overflow-hidden bg-red-50 px-4"
+>
+  <div class="flex w-full max-w-7xl flex-1 flex-col py-26">
+    <SectionTitle
+      title="Our Distinguished Chairs"
+      subtitle="COMMITTEE"
+      description="Bringing together a diverse coalition of visionary educators and medical pioneers to curate a program that bridges the gap between advanced biomedical engineering and modern clinical practice."
+    />
+
+    <CommitteeCardRenderer />
+  </div>
+</section>
