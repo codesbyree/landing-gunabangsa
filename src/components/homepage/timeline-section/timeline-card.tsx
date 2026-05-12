@@ -1,3 +1,5 @@
+import { isWithinInterval, parseISO } from "date-fns"
+
 import { Badge } from "@/components/ui/badge"
 import {
   Card,
@@ -13,6 +15,8 @@ export type TimelineTypes = {
   description: string
   date: string
   status: string
+  start_date: string
+  end_date: string
 }
 
 type Props = TimelineTypes & {
@@ -23,9 +27,13 @@ export default function TimelineCard({
   title,
   description,
   date,
-  status,
   index,
+  start_date,
+  end_date,
 }: Props) {
+  const isLive = isCurrentDateInWindow(start_date, end_date)
+  console.log({ isLive })
+
   return (
     <Card className="relative">
       <CardHeader>
@@ -33,7 +41,9 @@ export default function TimelineCard({
         <CardDescription>{description}</CardDescription>
 
         <CardAction>
-          <Badge variant="default">{status}</Badge>
+          <Badge variant={isLive ? "default" : "outline"}>
+            {isLive ? "Open" : "Upcoming"}
+          </Badge>
         </CardAction>
       </CardHeader>
 
@@ -46,4 +56,19 @@ export default function TimelineCard({
       </CardContent>
     </Card>
   )
+}
+
+const isCurrentDateInWindow = (start: string, end: string): boolean => {
+  const now = new Date()
+
+  try {
+    return isWithinInterval(now, {
+      start: parseISO(start),
+      end: parseISO(end),
+    })
+  } catch (error: unknown) {
+    const err = error as Error
+    console.log(err.message)
+    return false
+  }
 }

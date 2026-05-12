@@ -1,16 +1,18 @@
+---
+import CarouselImage from "./carousel-image.tsx"
+---
+
 <section
   class="relative flex h-dvh w-full justify-center overflow-hidden bg-red-950 px-4"
 >
   <div class="absolute inset-0 z-10">
-    <div class="absolute inset-0 bg-slate-950/50"></div>
+    <div
+      class="absolute inset-0 z-20 bg-linear-to-tl from-red-950 via-transparent to-red-950"
+    >
+    </div>
+    <div class="absolute inset-0 z-10 bg-slate-950/30"></div>
 
-    <!-- <video autoplay muted loop playsinline class="h-full w-full object-cover">
-      <source
-        src="/assets/healthmed-hero-video-compressed.mp4"
-        type="video/mp4"
-      />
-      Your browser does not support the video tag.
-    </video> -->
+    <CarouselImage client:load />
   </div>
 
   <div

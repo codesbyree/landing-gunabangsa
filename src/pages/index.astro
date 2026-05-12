@@ -7,6 +7,7 @@ import { Separator } from "@/components/ui/separator.tsx"
 import PublicationOpportunitySection from "@/components/homepage/publication-opportunity-section.astro"
 import SpeakersSection from "@/components/homepage/speakers-section/index.astro"
 import TimelineSection from "@/components/homepage/timeline-section/index.astro"
+import RunningText from "@/components/shared/running-text.tsx"
 ---
 
 <Layout>
@@ -16,6 +17,7 @@ import TimelineSection from "@/components/homepage/timeline-section/index.astro"
     <Separator />
     <PublicationOpportunitySection />
     <Separator />
+    <RunningText client:load />
     <ResearchTracks />
     <Separator />
     <SpeakersSection />
