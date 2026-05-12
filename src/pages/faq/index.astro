@@ -1,9 +1,15 @@
 ---
 import Layout from "@/layouts/main.astro"
+import Breadcrumbs from "@/components/shared/breadcrumbs.astro"
+import QuestionsSection from "@/components/faq-page/questions-section.astro"
 ---
 
 <Layout>
+  <Breadcrumbs
+    pageName="FAQ"
+    coverImageUrl="/assets/images/hero-carousel/slide - 4.webp"
+  />
   <main>
-    <h1>Hello from FAQ Page</h1>
+    <QuestionsSection />
   </main>
 </Layout>
