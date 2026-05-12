@@ -1,0 +1,87 @@
+---
+import { Badge } from "@/components/ui/badge"
+import SectionTitle from "@/components/shared/section-title.astro"
+import { AspectRatio } from "../ui/aspect-ratio"
+---
+
+<section
+  class="relative flex w-full justify-center overflow-hidden bg-red-50 px-4"
+>
+  <div class="relative z-10 flex w-full max-w-7xl flex-1 flex-col py-26 pt-0">
+    <SectionTitle
+      title="Conference Organizers and Partners"
+      subtitle="NETWORK"
+      description="Meet the prestigious organizations and partners dedicated to advancing the future of biomedical engineering and modern healthcare."
+    />
+
+    <div class="flex flex-col gap-4">
+      <h2 class="text-lg font-medium text-red-800 md:text-xl">
+        Host and Co-Host
+      </h2>
+
+      <div class="mb-4 grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3">
+        <!-- HOST -->
+        <div
+          class="relative grid grid-cols-[.7fr_.3fr] gap-5 overflow-hidden rounded-2xl border border-border bg-card p-6"
+        >
+          <div class="relative z-20 flex flex-col justify-between gap-4">
+            <Badge variant="default">HOST</Badge>
+
+            <div>
+              <h4 class="font-heading text-base font-medium">
+                STIKES Guna Bangsa Yogyakarta
+              </h4>
+              <p class="text-muted-foreground">Indonesia</p>
+            </div>
+          </div>
+
+          <div
+            class="absolute top-1/2 right-[-60%] h-60 w-60 -translate-y-1/2 rotate-45 rounded-xl bg-red-200/30 md:right-[-50%] lg:right-[-40%]"
+          >
+          </div>
+
+          <div class="relative z-20 grid w-full place-items-center">
+            <AspectRatio ratio={1 / 1}>
+              <img
+                src="/assets/images/stikes-gb.png"
+                alt=""
+                class="h-full w-full object-cover"
+              />
+            </AspectRatio>
+          </div>
+        </div>
+
+        <!-- CO-HOST -->
+        <div
+          class="relative grid grid-cols-[.7fr_.3fr] gap-5 overflow-hidden rounded-2xl border border-border bg-card p-6"
+        >
+          <div class="relative z-20 flex flex-col justify-between gap-4">
+            <Badge variant="default">CO-HOST</Badge>
+
+            <div>
+              <h4 class="font-heading text-base font-medium">
+                Boromarajonani College of Nursing Sawanpracharak Nakhon Sawan
+              </h4>
+              <p class="text-muted-foreground">Nakhon Sawan, Thailand</p>
+            </div>
+          </div>
+
+          <div
+            class="absolute top-1/2 right-[-60%] h-60 w-60 -translate-y-1/2 rotate-45 rounded-xl bg-red-200/30 md:right-[-50%] lg:right-[-40%]"
+          >
+          </div>
+
+          <div class="relative z-20 grid w-full place-items-center">
+            <AspectRatio ratio={1 / 1}>
+              <img
+                src="/assets/images/co-host.png"
+                alt=""
+                class="h-full w-full object-cover"
+              />
+            </AspectRatio>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
