@@ -20,13 +20,25 @@ import { AspectRatio } from "../ui/aspect-ratio"
     <div
       class="relative grid grid-cols-1 gap-4 md:grid-cols-[.55fr_1fr] md:gap-10 lg:gap-20"
     >
-      <div class="h-full w-full">
+      <div class="flex h-full w-full flex-col justify-end">
         <div
-          class="absolute top-1/2 -left-80 z-1 hidden w-full max-w-3xl -translate-y-1/2 md:block"
+          class="absolute top-1/2 -left-80 z-1 hidden h-full w-full max-w-3xl -translate-y-1/2 md:block"
         >
           <AspectRatio ratio={1 / 1}>
             <img src="/assets/images/venue-ilustration.jpg" alt="" />
           </AspectRatio>
+        </div>
+
+        <div class="relative z-30 hidden items-center gap-4 lg:flex">
+          <div class="h-3 w-3 animate-ping rounded-full bg-red-600"></div>
+          <div
+            class="rounded-lg border border-border bg-slate-50/90 p-2 text-xs text-slate-600"
+          >
+            <span>Venue</span>
+            <p class="font-medium text-red-700">
+              İstanbul Gelişim Üniversitesi Tower
+            </p>
+          </div>
         </div>
       </div>
 
@@ -54,6 +66,7 @@ import { AspectRatio } from "../ui/aspect-ratio"
           that contribute to healthcare excellence and advancements in life
           treatment.
         </p>
+
         <p>This conference will feature:</p>
 
         <div class="grid grid-cols-1 gap-2 text-left md:grid-cols-2">
@@ -107,6 +120,16 @@ import { AspectRatio } from "../ui/aspect-ratio"
             />
             <p>Networking opportunities for global collaboration</p>
           </div>
+        </div>
+
+        <div class="rounded-lg border border-red-200 bg-red-100 p-2 px-4">
+          <span class="font-heading text-xs font-medium text-red-300 uppercase"
+            >Conference Theme</span
+          >
+          <p class="font-medium text-red-900">
+            "Innovating Healthcare Excellence: Integrating Advanced Life
+            Treatment and Human-Centered Medicine for a Sustainable Future"
+          </p>
         </div>
 
         <p>

@@ -1,19 +1,24 @@
 ---
+import { cn } from "@/lib/utils"
+import { HugeiconsIcon } from "@hugeicons/react"
+import { UserAdd02Icon } from "@hugeicons/core-free-icons"
+
+import { buttonVariants } from "@/components/ui/button"
 import DesktopNavigation from "./desktop-navigation"
 import MobileNavigation from "./mobile-navigation"
 ---
 
 <div
-  class="fixed top-0 left-0 z-1000 flex w-full justify-center bg-slate-950/20 backdrop-blur-xs"
+  class="fixed top-0 left-0 z-1000 flex w-full justify-center bg-white shadow-md"
 >
   <div
-    class="flex w-full max-w-7xl items-center justify-between gap-4 p-1 px-4 lg:p-0"
+    class="flex w-full items-center justify-between gap-4 p-1 px-4 lg:p-0 lg:px-10"
   >
     <a href="/">
       <img
         src="/assets/images/conference-logo.png"
         alt="logo"
-        class="h-8 w-19 mix-blend-difference md:h-12 md:w-34"
+        class="h-8 mix-blend-difference md:h-10"
       />
     </a>
 
@@ -23,5 +28,17 @@ import MobileNavigation from "./mobile-navigation"
     <div class="block lg:hidden">
       <MobileNavigation client:load />
     </div>
+
+    <a
+      href="https://igers.org/"
+      target="_blank"
+      class={cn(buttonVariants({ variant: "default" }), "hidden lg:flex")}
+    >
+      Register now <HugeiconsIcon
+        icon={UserAdd02Icon}
+        size={16}
+        color="currentColor"
+      />
+    </a>
   </div>
 </div>

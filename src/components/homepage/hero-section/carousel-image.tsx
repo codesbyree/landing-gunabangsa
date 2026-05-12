@@ -16,16 +16,16 @@ const carouselImageUrls = [
 export default function CarouselImage() {
   return (
     <Carousel
-      className="h-dvh w-full"
+      className="absolute top-0 left-0 h-dvh w-full"
       plugins={[Autoplay({ delay: 5000 }), Fade()]}
     >
-      <CarouselContent>
+      <CarouselContent className="bg-blue-600">
         {carouselImageUrls.map((url, index) => (
-          <CarouselItem key={index}>
+          <CarouselItem key={index} className="h-full w-full bg-blue-200">
             <img
               src={url}
               alt={`Slide ${index + 1}`}
-              className="h-full w-full object-cover"
+              className="h-dvh w-full object-cover"
             />
           </CarouselItem>
         ))}

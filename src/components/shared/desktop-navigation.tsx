@@ -45,6 +45,12 @@ export default function DesktopNavigation() {
     <NavigationMenu className="bg-white p-2 px-4">
       <NavigationMenuList className="gap-1">
         <NavigationMenuItem>
+          <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+            <a href="/">Home</a>
+          </NavigationMenuLink>
+        </NavigationMenuItem>
+
+        <NavigationMenuItem>
           <NavigationMenuTrigger>Author Information</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="w-96">

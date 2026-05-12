@@ -1,31 +1,80 @@
 ---
+import { cn } from "@/lib/utils"
+import { buttonVariants } from "@/components/ui/button"
 import CarouselImage from "./carousel-image.tsx"
+import { HugeiconsIcon } from "@hugeicons/react"
+import { Download01Icon, SentIcon } from "@hugeicons/core-free-icons"
 ---
 
 <section
-  class="relative flex h-dvh w-full justify-center overflow-hidden bg-red-950 px-4"
+  class="relative flex h-dvh w-full justify-center overflow-hidden bg-zinc-950 px-4"
 >
-  <div class="absolute inset-0 z-10">
-    <div
-      class="absolute inset-0 z-20 bg-linear-to-tl from-red-950 via-transparent to-red-950"
-    >
-    </div>
-    <div class="absolute inset-0 z-10 bg-slate-950/30"></div>
-
-    <CarouselImage client:load />
+  <div
+    class="absolute inset-0 z-20 bg-linear-to-tl from-orange-950 via-transparent to-orange-950"
+  >
   </div>
+  <div class="absolute inset-0 z-10 bg-slate-950/40"></div>
+
+  <CarouselImage client:load />
 
   <div
-    class="relative z-50 flex w-full max-w-7xl flex-1 items-end justify-center py-26"
+    class="relative z-50 flex w-full max-w-7xl flex-1 items-end justify-center py-10 lg:py-26"
   >
     <div class="flex w-full flex-col">
-      <h1
-        class="w-full max-w-3xl text-xl font-semibold text-white sm:text-2xl md:text-3xl lg:text-4xl"
-      >
-        The 1st Healthcare Excellence and Advancements in Life Treatment & Human
-        Medicine – International Conference (HEALTHMED-IC)
-      </h1>
-      <p></p>
+      <div class="mb-10">
+        <h1
+          class="mb-4 w-full max-w-3xl text-xl font-semibold text-white sm:text-xl md:text-2xl lg:text-3xl"
+        >
+          The 1st Healthcare Excellence and Advancements in Life Treatment &
+          Human Medicine – International Conference (HEALTHMED-IC)
+        </h1>
+
+        <p class="max-w-xl text-slate-200">
+          More than just a conference, HEALTHMED-IC is your invitation to the
+          front lines of medical evolution. Experience a curated exchange of
+          knowledge designed to empower practitioners and innovators alike in
+          our collective pursuit of global healthcare excellence and
+          life-science advancement.
+        </p>
+      </div>
+
+      <div class="flex justify-between gap-10">
+        <div class="flex flex-col gap-2 md:flex-row">
+          <a
+            href="author-informations/initial-submission-instructions"
+            class={cn(buttonVariants({ variant: "default", size: "lg" }))}
+            >Submit a manuscript
+            <HugeiconsIcon icon={SentIcon} size={16} color="currentColor" />
+          </a>
+
+          <a
+            href=""
+            class={cn(buttonVariants({ variant: "secondary", size: "lg" }))}
+            >Download guidelines
+            <HugeiconsIcon
+              icon={Download01Icon}
+              size={16}
+              color="currentColor"
+            />
+          </a>
+        </div>
+
+        <div class="flex flex-col gap-2 md:flex-row">
+          <div>
+            <span class="text-xs text-slate-300">VENUE</span>
+            <p class="text-sm font-medium text-slate-50">
+              İstanbul Gelişim Üniversitesi Tower
+            </p>
+          </div>
+
+          <span class="mx-4 hidden h-full w-px bg-slate-50/50 lg:block"></span>
+
+          <div>
+            <span class="text-xs text-slate-300">CONFERENCE DATE</span>
+            <p class="text-sm font-medium text-slate-50">November 5-7, 2026</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>

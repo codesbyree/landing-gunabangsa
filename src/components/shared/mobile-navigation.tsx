@@ -53,7 +53,7 @@ export default function MobileNavigation() {
           <HugeiconsIcon
             icon={Menu09Icon}
             size={24}
-            className="shrink-0 text-white"
+            className="shrink-0 text-red-950"
             color="currentColor"
           />
         </Button>
