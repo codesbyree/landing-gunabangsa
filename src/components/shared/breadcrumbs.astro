@@ -9,7 +9,7 @@ const { pageName, coverImageUrl } = Astro.props
 
 <div class="relative h-100 w-full overflow-hidden bg-red-950">
   <div
-    class="absolute inset-0 z-10 flex flex-col items-center justify-center gap-2 bg-black text-white opacity-50"
+    class="absolute inset-0 z-50 flex flex-col items-center justify-center gap-2 text-white opacity-50"
   >
     <p class="text-4xl">{pageName}</p>
 
@@ -20,5 +20,10 @@ const { pageName, coverImageUrl } = Astro.props
     </div>
   </div>
 
+  <div
+    class="absolute inset-0 z-20 bg-linear-to-tl from-orange-800 via-transparent to-orange-800 opacity-50"
+  >
+  </div>
+  <div class="absolute inset-0 z-10 bg-black opacity-50"></div>
   <img src={coverImageUrl} alt={pageName} class="h-full w-full object-cover" />
 </div>

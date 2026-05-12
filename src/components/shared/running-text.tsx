@@ -35,7 +35,7 @@ const Pill = () => {
     <div className="rounded-full shadow-sm">
       <div className="grid h-8 w-8 place-items-center rounded-full border border-red-200 bg-radial from-red-50 to-red-200 shadow-[inset_0_0_4px_rgba(0,0,0,.4)]">
         <div className="absolute flex h-7 w-7 items-center overflow-hidden rounded-full bg-linear-to-tl from-red-200 to-red-50">
-          <div className="h-1 w-7 rotate-45 bg-red-100 shadow-[inset_0_0_4px_rgba(0,0,0,.3)]"></div>
+          <div className="h-1 w-7 bg-red-100 shadow-[inset_0_0_4px_rgba(0,0,0,.3)]"></div>
         </div>
       </div>
     </div>

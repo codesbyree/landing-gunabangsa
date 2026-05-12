@@ -1,0 +1,37 @@
+---
+import { AspectRatio } from "../ui/aspect-ratio"
+import SectionTitle from "@/components/shared/section-title.astro"
+---
+
+<section class="flex w-full justify-center bg-white px-4">
+  <div class="flex w-full max-w-7xl flex-1 flex-col py-26">
+    <SectionTitle
+      title="How to Join as Author"
+      subtitle="AUTHOR"
+      description="Submit your research and join our community of scholars. Follow our streamlined process to publish your work in modern health sciences."
+    />
+
+    <div
+      class="grid w-full grid-cols-2 gap-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5"
+    >
+      {
+        [
+          "Click the Acronym of the conference you wish to participate in from the list.",
+          "Click the 'Join as Author' button on the conference detail page.",
+          "On the New Submission page, fill in metadata: category, author info, title, and abstract.",
+          "Upload your paper in the required format and click the 'Submit' button.",
+          "The conference team will contact you regarding your submission via your registered email.",
+        ].map((step, index) => (
+          <AspectRatio ratio={3 / 4}>
+            <div class="relative flex h-full w-full flex-col justify-end gap-2 rounded-2xl bg-red-900 p-6 shadow-[inset_0_0_10px_rgba(202,53,0,1)] transition-all hover:-translate-y-1 hover:opacity-90">
+              <p class="absolute top-6 left-6 text-7xl font-black text-white/30">
+                {index + 1}
+              </p>
+              <p class="font-medium text-white">{step}</p>
+            </div>
+          </AspectRatio>
+        ))
+      }
+    </div>
+  </div>
+</section>
