@@ -1,6 +1,11 @@
 ---
 import Layout from "@/layouts/main.astro"
 import Breadcrumbs from "@/components/shared/breadcrumbs.astro"
+import RegistrationSection from "@/components/registration-page/registration-section/index.astro"
+import InformationSection from "@/components/registration-page/information-section/index.astro"
+import RunningText from "@/components/shared/running-text"
+import { Separator } from "@/components/ui/separator"
+import CombinedRegistrationSection from "@/components/registration-page/combined-registration-section/index.astro"
 ---
 
 <Layout>
@@ -8,5 +13,11 @@ import Breadcrumbs from "@/components/shared/breadcrumbs.astro"
     pageName="Registrations"
     coverImageUrl="/assets/images/hero-carousel/slide - 3.webp"
   />
-  <main></main>
+  <main>
+    <InformationSection />
+    <RunningText />
+    <RegistrationSection />
+    <Separator />
+    <CombinedRegistrationSection />
+  </main>
 </Layout>

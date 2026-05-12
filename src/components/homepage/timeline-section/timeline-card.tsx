@@ -34,7 +34,7 @@ export default function TimelineCard({
   const isLive = isCurrentDateInWindow(start_date, end_date)
 
   return (
-    <Card className="relative transition-all hover:-translate-y-1 hover:border-red-100 hover:shadow-sm">
+    <Card className="relative shadow-[inset_0_0_10px_rgba(0,0,0,0.1)] transition-all hover:-translate-y-1 hover:border-red-100">
       <CardHeader>
         <CardTitle>{title}</CardTitle>
         <CardDescription>{description}</CardDescription>

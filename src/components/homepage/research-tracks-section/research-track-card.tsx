@@ -23,7 +23,7 @@ export default function ResearchTrackCard({
   description,
 }: Props) {
   return (
-    <Card className="transition-transform hover:-translate-y-1 hover:shadow-md">
+    <Card className="shadow-[inset_0_0_10px_rgba(0,0,0,0.1)] transition-transform hover:-translate-y-1">
       <CardHeader>
         <div className="mb-2">{icon}</div>
 

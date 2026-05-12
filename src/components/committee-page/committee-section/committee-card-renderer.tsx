@@ -144,7 +144,7 @@ export default function CommitteeCardRenderer() {
       {sections.map((section) => (
         <div className="space-y-4">
           <div className="flex items-center gap-4">
-            {section.icon}
+            <div className="text-red-800">{section.icon}</div>
 
             <h2 className="text-lg font-medium text-red-800 md:text-xl">
               {section.title}

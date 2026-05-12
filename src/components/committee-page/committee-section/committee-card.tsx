@@ -21,7 +21,7 @@ export default function CommitteeCard({
   return (
     <Item
       variant="outline"
-      className="bg-card transition-all hover:-translate-y-1 hover:shadow-md"
+      className="bg-card shadow-[inset_0_0_10px_rgba(0,0,0,0.1)] transition-all hover:-translate-y-1"
     >
       <ItemContent>
         <ItemTitle>{name}</ItemTitle>

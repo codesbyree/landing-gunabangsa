@@ -1,0 +1,176 @@
+---
+import { HugeiconsIcon } from "@hugeicons/react"
+import {
+  LocationStarIcon,
+  PresentationOnlineIcon,
+  RecordIcon,
+} from "@hugeicons/core-free-icons"
+
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardContent,
+} from "@/components/ui/card"
+---
+
+<div class="space-y-4">
+  <h3 class="text-lg font-medium text-red-800">Benefits of Registration</h3>
+
+  <div class="grid grid-cols-1 gap-2 md:grid-cols-2">
+    <Card
+      className="shadow-[inset_0_0_10px_rgba(0,0,0,0.1)] transition-transform hover:-translate-y-1"
+    >
+      <CardHeader>
+        <div class="mb-2">
+          <HugeiconsIcon
+            icon={LocationStarIcon}
+            size={28}
+            className="shrink-0 text-red-400"
+            color="currentColor"
+          />
+        </div>
+
+        <CardTitle>For onsite participants</CardTitle>
+      </CardHeader>
+
+      <CardContent>
+        <div class="flex flex-col gap-2">
+          <div
+            class="flex gap-2 opacity-75 transition-opacity hover:opacity-60"
+          >
+            <HugeiconsIcon
+              icon={RecordIcon}
+              size={16}
+              className="shrink-0 text-red-400"
+              color="currentColor"
+            />
+            <p>Conference Program Book</p>
+          </div>
+          <div
+            class="flex gap-2 opacity-75 transition-opacity hover:opacity-60"
+          >
+            <HugeiconsIcon
+              icon={RecordIcon}
+              size={16}
+              className="shrink-0 text-red-400"
+              color="currentColor"
+            />
+            <p>Name Tag</p>
+          </div>
+          <div
+            class="flex gap-2 opacity-75 transition-opacity hover:opacity-60"
+          >
+            <HugeiconsIcon
+              icon={RecordIcon}
+              size={16}
+              className="shrink-0 text-red-400"
+              color="currentColor"
+            />
+            <p>Certificate of Participation</p>
+          </div>
+          <div
+            class="flex gap-2 opacity-75 transition-opacity hover:opacity-60"
+          >
+            <HugeiconsIcon
+              icon={RecordIcon}
+              size={16}
+              className="shrink-0 text-red-400"
+              color="currentColor"
+            />
+            <p>Goodie Bag (seminar kit and souvenir)</p>
+          </div>
+          <div
+            class="flex gap-2 opacity-75 transition-opacity hover:opacity-60"
+          >
+            <HugeiconsIcon
+              icon={RecordIcon}
+              size={16}
+              className="shrink-0 text-red-400"
+              color="currentColor"
+            />
+            <p>Conference Abstract e-Book</p>
+          </div>
+          <div
+            class="flex gap-2 opacity-75 transition-opacity hover:opacity-60"
+          >
+            <HugeiconsIcon
+              icon={RecordIcon}
+              size={16}
+              className="shrink-0 text-red-400"
+              color="currentColor"
+            />
+            <p>Coffee Break</p>
+          </div>
+        </div>
+      </CardContent>
+    </Card>
+
+    <Card
+      className="shadow-[inset_0_0_10px_rgba(0,0,0,0.1)] transition-transform hover:-translate-y-1"
+    >
+      <CardHeader>
+        <div class="mb-2">
+          <HugeiconsIcon
+            icon={PresentationOnlineIcon}
+            size={28}
+            className="shrink-0 text-red-400"
+            color="currentColor"
+          />
+        </div>
+
+        <CardTitle>For online participants</CardTitle>
+      </CardHeader>
+
+      <CardContent>
+        <div class="flex flex-col gap-2">
+          <div
+            class="flex gap-2 opacity-75 transition-opacity hover:opacity-60"
+          >
+            <HugeiconsIcon
+              icon={RecordIcon}
+              size={16}
+              className="shrink-0 text-red-400"
+              color="currentColor"
+            />
+            <p>Conference Program Book</p>
+          </div>
+          <div
+            class="flex gap-2 opacity-75 transition-opacity hover:opacity-60"
+          >
+            <HugeiconsIcon
+              icon={RecordIcon}
+              size={16}
+              className="shrink-0 text-red-400"
+              color="currentColor"
+            />
+            <p>Conference Program e-Book</p>
+          </div>
+          <div
+            class="flex gap-2 opacity-75 transition-opacity hover:opacity-60"
+          >
+            <HugeiconsIcon
+              icon={RecordIcon}
+              size={16}
+              className="shrink-0 text-red-400"
+              color="currentColor"
+            />
+            <p>Conference Abstract e-Book</p>
+          </div>
+          <div
+            class="flex gap-2 opacity-75 transition-opacity hover:opacity-60"
+          >
+            <HugeiconsIcon
+              icon={RecordIcon}
+              size={16}
+              className="shrink-0 text-red-400"
+              color="currentColor"
+            />
+            <p>e-Certificate of Participation</p>
+          </div>
+        </div>
+      </CardContent>
+    </Card>
+  </div>
+</div>

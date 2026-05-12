@@ -1,0 +1,114 @@
+---
+import { HugeiconsIcon } from "@hugeicons/react"
+import {
+  RecordIcon,
+  PresentationBarChart01Icon,
+  UserIcon,
+} from "@hugeicons/core-free-icons"
+
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardContent,
+} from "@/components/ui/card"
+
+const participantSteps = [
+  "Complete account registration before proceeding.",
+  "After logging in, go to the Home Page and select the conference you wish to attend.",
+  'Click "Join as Participant" at the bottom-left corner of the conference card.',
+  "Complete the participant form: select the conference and choose the applicable participation category.",
+  "Review all submitted information carefully, then click Submit to confirm.",
+  "After submission, you may proceed directly to payment.",
+  "You will be redirected to the Xendit payment page to select your preferred payment method.",
+  "Complete the payment following the instructions provided by Xendit.",
+]
+
+const presenterSteps = [
+  "Complete the account registration process on the official portal before proceeding.",
+  "Upon login, navigate to the Home Page and identify the conference you intend to participate in.",
+  'Click the "Join as Author" button at the bottom-left corner of the conference card.',
+  "Select the appropriate Conference Name and Submission Category from the provided menus.",
+  "Provide details for all contributors: Full Name, Email Address, Country, and Institutional Affiliation.",
+  "Enter the Paper Title and Abstract, select the relevant Topic, and upload the manuscript file.",
+  "After all required fields have been completed, click Submit.",
+  "Your submission will undergo an editorial and peer-review process.",
+  "If eligible, you will receive an official email with the Letter of Acceptance (LoA), Invoice, and revision notes.",
+  "If accepted, complete the payment, submit proof of payment to IGERS, and submit the revised paper.",
+]
+---
+
+<div class="space-y-4">
+  <h3 class="text-lg font-medium text-red-800">Notes for Authors</h3>
+
+  <div class="grid grid-cols-1 gap-2 md:grid-cols-2">
+    {/* Steps for Participants */}
+    <Card
+      className="shadow-[inset_0_0_10px_rgba(0,0,0,0.1)] transition-transform hover:-translate-y-1"
+    >
+      <CardHeader>
+        <div class="mb-2">
+          <HugeiconsIcon
+            icon={UserIcon}
+            size={28}
+            className="shrink-0 text-red-400"
+            color="currentColor"
+          />
+        </div>
+        <CardTitle>For Participants</CardTitle>
+      </CardHeader>
+      <CardContent>
+        <ol class="flex flex-col gap-3">
+          {
+            participantSteps.map((step) => (
+              <li class="flex gap-3 opacity-75 transition-opacity hover:opacity-60">
+                <HugeiconsIcon
+                  icon={RecordIcon}
+                  size={16}
+                  className="shrink-0 text-red-400"
+                  color="currentColor"
+                />
+                <p>{step}</p>
+              </li>
+            ))
+          }
+        </ol>
+      </CardContent>
+    </Card>
+
+    {/* Steps for Presenters */}
+    <Card
+      className="shadow-[inset_0_0_10px_rgba(0,0,0,0.1)] transition-transform hover:-translate-y-1"
+    >
+      <CardHeader>
+        <div class="mb-2">
+          <HugeiconsIcon
+            icon={PresentationBarChart01Icon}
+            size={28}
+            className="shrink-0 text-red-400"
+            color="currentColor"
+          />
+        </div>
+        <CardTitle>For Presenters</CardTitle>
+      </CardHeader>
+      <CardContent>
+        <ol class="flex flex-col gap-3">
+          {
+            presenterSteps.map((step) => (
+              <li class="flex gap-3 opacity-75 transition-opacity hover:opacity-60">
+                <HugeiconsIcon
+                  icon={RecordIcon}
+                  size={16}
+                  className="shrink-0 text-red-400"
+                  color="currentColor"
+                />
+                <p>{step}</p>
+              </li>
+            ))
+          }
+        </ol>
+      </CardContent>
+    </Card>
+  </div>
+</div>
