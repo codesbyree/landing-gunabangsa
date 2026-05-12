@@ -1,9 +1,15 @@
 ---
 import Layout from "@/layouts/main.astro"
+import Breadcrumbs from "@/components/shared/breadcrumbs.astro"
+import GallerySection from "@/components/gallery-page/gallery-section.astro"
 ---
 
 <Layout>
+  <Breadcrumbs
+    pageName="Gallery"
+    coverImageUrl="/assets/images/hero-carousel/slide - 1.webp"
+  />
   <main>
-    <h1>Hello from Gallery Page</h1>
+    <GallerySection />
   </main>
 </Layout>
