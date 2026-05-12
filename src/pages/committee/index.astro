@@ -1,9 +1,14 @@
 ---
 import Layout from "@/layouts/main.astro"
 import CommitteeSection from "@/components/committee-page/committee-section/index.astro"
+import Breadcrumbs from "@/components/shared/breadcrumbs.astro"
 ---
 
 <Layout>
+  <Breadcrumbs
+    pageName="Committee"
+    coverImageUrl="/assets/images/hero-carousel/slide - 2.webp"
+  />
   <main>
     <CommitteeSection />
   </main>
