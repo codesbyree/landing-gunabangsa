@@ -1,6 +1,6 @@
 export default function RunningText() {
   return (
-    <div className="overflow-hidden border-y border-red-800 bg-red-500 py-3 shadow-[inset_0_0_4px_rgba(0,0,0,.4)]">
+    <div className="overflow-hidden border-y border-red-800 bg-red-500 py-2 shadow-[inset_0_0_4px_rgba(0,0,0,.4)]">
       <div className="animate-marquee flex items-center gap-16 whitespace-nowrap will-change-transform">
         {[1, 2, 3, 4, 5, 6].map((i) => (
           <div

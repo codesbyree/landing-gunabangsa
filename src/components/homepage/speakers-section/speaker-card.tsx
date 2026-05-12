@@ -35,7 +35,7 @@ export default function SpeakerCard({
         />
 
         <div className="absolute bottom-0 left-0 flex h-full w-full items-end bg-linear-to-t from-red-950/90 via-red-950/20 to-transparent p-4">
-          <div className="relative w-full rounded-lg bg-red-800 p-6 transition-all group-hover:translate-y-10 group-hover:opacity-0">
+          <div className="relative w-full rounded-lg bg-red-700 p-6 shadow-[inset_0_0_10px_rgba(0,0,0,0.5)] transition-all group-hover:translate-y-10 group-hover:opacity-0">
             <h3 className="relative z-5 font-semibold text-red-50">{name}</h3>
             <p className="relative z-5 text-sm text-red-50/80">{affiliation}</p>
 
