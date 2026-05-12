@@ -1,0 +1,85 @@
+---
+import SectionTitleAlt from "@/components/shared/section-title-alt.astro"
+import { Location03Icon } from "@hugeicons/core-free-icons"
+import { HugeiconsIcon } from "@hugeicons/react"
+import { AspectRatio } from "../ui/aspect-ratio"
+---
+
+<section
+  class="flex min-h-dvh w-full justify-center overflow-hidden bg-red-50 px-4"
+>
+  <div class="flex w-full max-w-7xl flex-1 flex-col py-26">
+    <SectionTitleAlt
+      title="İstanbul Gelişim Üniversitesi Tower"
+      subtitle="VENUE"
+    />
+
+    <div
+      class="relative grid grid-cols-1 gap-4 md:grid-cols-[.55fr_1fr] md:gap-10 lg:gap-20"
+    >
+      <div class="flex h-full w-full flex-col justify-end">
+        <div
+          class="absolute top-1/2 -left-80 z-1 hidden h-full w-full max-w-3xl -translate-y-1/2 md:block"
+        >
+          <AspectRatio ratio={1 / 1}>
+            <img src="/assets/images/venue-ilustration.jpg" alt="" />
+          </AspectRatio>
+        </div>
+      </div>
+
+      <div
+        class="relative z-10 flex flex-col gap-4 bg-red-50/80 text-slate-600 md:text-justify"
+      >
+        <p>
+          Join us at the state-of-the-art İstanbul Gelişim Üniversitesi Tower,
+          designed to inspire collaboration and innovation in medical sciences.
+          The venue features modern auditoriums, interactive exhibition spaces,
+          and comfortable networking areas.
+        </p>
+
+        <div class="space-y-6 rounded-xl border border-red-200 bg-red-100 p-6">
+          <h4 class="text-heading text-red-900">Contact & Address</h4>
+
+          <div class="space-y-4">
+            <div class="flex gap-4">
+              <div
+                class="grid h-10 w-10 place-items-center rounded-full border-border bg-slate-50 text-red-900 shadow-[inset_2px_2px_2px_rgba(0,0,0,0.1)]"
+              >
+                <HugeiconsIcon
+                  icon={Location03Icon}
+                  size={24}
+                  color="currentColor"
+                />
+              </div>
+
+              <div>
+                <p class="text-red-900">Address</p>
+                <p>
+                  Cihangir, Petrol Ofisi Cd. No:5 34310 Avcılar/İstanbul,
+                  Türkiye
+                </p>
+              </div>
+            </div>
+
+            <div class="flex gap-4">
+              <div
+                class="grid h-10 w-10 place-items-center rounded-full border-border bg-slate-50 text-red-900 shadow-[inset_2px_2px_2px_rgba(0,0,0,0.1)]"
+              >
+                <HugeiconsIcon
+                  icon={Location03Icon}
+                  size={24}
+                  color="currentColor"
+                />
+              </div>
+
+              <div>
+                <p class="text-red-900">Phone</p>
+                <p>+1 (555) 123-4567</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
