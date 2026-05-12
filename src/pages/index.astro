@@ -1,13 +1,14 @@
 ---
+import { Separator } from "@/components/ui/separator.tsx"
 import Layout from "@/layouts/main.astro"
 import HeroSection from "@/components/homepage/hero-section/index.astro"
 import WelcomeSection from "@/components/homepage/welcome-section.astro"
 import ResearchTracks from "@/components/homepage/research-tracks-section/index.astro"
-import { Separator } from "@/components/ui/separator.tsx"
 import PublicationOpportunitySection from "@/components/homepage/publication-opportunity-section.astro"
 import SpeakersSection from "@/components/homepage/speakers-section/index.astro"
 import TimelineSection from "@/components/homepage/timeline-section/index.astro"
 import RunningText from "@/components/shared/running-text.tsx"
+import SponsorsSection from "@/components/homepage/sponsors-section.astro"
 ---
 
 <Layout>
@@ -23,5 +24,6 @@ import RunningText from "@/components/shared/running-text.tsx"
     <SpeakersSection />
     <Separator />
     <TimelineSection />
+    <SponsorsSection />
   </main>
 </Layout>
