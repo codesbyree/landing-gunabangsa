@@ -77,7 +77,7 @@ export default function DesktopNavigation() {
 
         <NavigationMenuItem>
           <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-            <a href="/registrations">Registrations</a>
+            <a href="/registrations">Registration Fees</a>
           </NavigationMenuLink>
         </NavigationMenuItem>
 

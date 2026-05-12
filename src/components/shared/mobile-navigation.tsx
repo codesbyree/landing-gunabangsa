@@ -39,7 +39,7 @@ const authorInformationMenuContent = [
 const mainLinks = [
   { title: "Venue", href: "/venue" },
   { title: "Committee", href: "/committee" },
-  { title: "Registrations", href: "/registrations" },
+  { title: "Registration Fees", href: "/registrations" },
   { title: "Our Partners", href: "/our-partners" },
   { title: "FAQs", href: "/faq" },
   { title: "Gallery", href: "/gallery" },
