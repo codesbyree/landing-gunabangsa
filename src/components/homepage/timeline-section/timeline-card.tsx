@@ -32,7 +32,6 @@ export default function TimelineCard({
   end_date,
 }: Props) {
   const isLive = isCurrentDateInWindow(start_date, end_date)
-  console.log({ isLive })
 
   return (
     <Card className="relative">
