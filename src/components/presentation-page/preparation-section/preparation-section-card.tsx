@@ -9,13 +9,21 @@ interface Props {
   title: string
   items: string[]
   icon: ReactNode
+  index: number
 }
 
-export default function PreparationSectionCard({ title, items, icon }: Props) {
+export default function PreparationSectionCard({
+  title,
+  items,
+  icon,
+  index,
+}: Props) {
   return (
     <Card
       className={cn(
-        "shadow-[inset_0_0_10px_rgba(0,0,0,0.1)] transition-transform hover:-translate-y-1"
+        "row-span-2 shadow-[inset_0_0_10px_rgba(0,0,0,0.1)] transition-transform hover:-translate-y-1",
+        index === 1 && "lg:row-span-1",
+        index === 2 && "lg:col-start-2 lg:row-span-1"
       )}
     >
       <CardHeader>

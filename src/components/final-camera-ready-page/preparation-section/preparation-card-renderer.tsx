@@ -38,7 +38,7 @@ export default function PreparationCardRenderer() {
         />
       ))}
 
-      <div className="relative overflow-hidden rounded-2xl bg-red-900 p-6 text-white">
+      <div className="relative overflow-hidden rounded-2xl bg-red-900 p-6 text-white shadow-[inset_0_0_10px_rgba(0,0,0,0.5)] transition-transform hover:-translate-y-1">
         <div className="pointer-events-none absolute right-0 bottom-0 p-10 opacity-5">
           <svg
             xmlns="http://www.w3.org/2000/svg"

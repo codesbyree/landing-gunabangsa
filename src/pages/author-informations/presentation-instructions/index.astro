@@ -1,9 +1,15 @@
 ---
 import Layout from "@/layouts/main.astro"
+import Breadcrumbs from "@/components/shared/breadcrumbs.astro"
+import PreparationSection from "@/components/initial-submission-page/preparation-section/index.astro"
 ---
 
 <Layout>
+  <Breadcrumbs
+    pageName="Presentation Instructions"
+    coverImageUrl="/assets/images/hero-carousel/slide - 3.webp"
+  />
   <main>
-    <h1>Hello from Presentation Instructions Page</h1>
+    <PreparationSection />
   </main>
 </Layout>
