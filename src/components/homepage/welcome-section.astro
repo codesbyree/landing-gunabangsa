@@ -11,7 +11,7 @@ import { AspectRatio } from "../ui/aspect-ratio"
 ---
 
 <section class="flex w-full justify-center overflow-hidden bg-red-50 px-4">
-  <div class="flex w-full max-w-7xl flex-1 flex-col py-26">
+  <div class="relative flex w-full max-w-7xl flex-1 flex-col py-26">
     <SectionTitleAlt
       title="Welcome to The 1st HEALTHMED-IC"
       subtitle="INVITATION"
@@ -22,10 +22,18 @@ import { AspectRatio } from "../ui/aspect-ratio"
     >
       <div class="flex h-full w-full flex-col justify-end">
         <div
-          class="absolute top-1/2 -left-80 z-1 hidden h-full w-full max-w-3xl -translate-y-1/2 md:block"
+          class="absolute top-1/2 -left-80 z-5 hidden h-full w-full max-w-3xl -translate-y-1/2 transition-opacity hover:opacity-0 md:block"
         >
           <AspectRatio ratio={1 / 1}>
             <img src="/assets/images/venue-ilustration.jpg" alt="" />
+          </AspectRatio>
+        </div>
+
+        <div
+          class="absolute top-1/2 -left-80 z-1 hidden h-full w-full max-w-3xl -translate-y-1/2 md:block"
+        >
+          <AspectRatio ratio={1 / 1}>
+            <img src="/assets/images/venue-ilustration-real.webp" alt="" />
           </AspectRatio>
         </div>
 
