@@ -10,6 +10,54 @@ import {
   ItemMedia,
   ItemGroup,
 } from "@/components/ui/item"
+
+const questions = [
+  {
+    title: "When will I be able to register for the conference?",
+    content:
+      "Registration is now open for participants, while presenters can register after receiving notification of paper acceptance. Please visit the HEALTHMED-IC 2026 Registration Page for full details on fees and policies.",
+  },
+  {
+    title: "What do I need to submit during the registration process?",
+    content:
+      "If you do not intend to publish your research, you may submit an abstract only. Otherwise, you are required to submit a full paper from the outset.",
+  },
+  {
+    title: "How do I view the program online?",
+    content:
+      "The program will be updated on the conference website as it is confirmed. This will be closer to the conference, after the Final Camera-Ready Submission deadline.",
+  },
+  {
+    title: "How do I get to the conference?",
+    content:
+      "Details on how to travel to the conference are available on the Venue page.",
+  },
+  {
+    title: "When is the early registration deadline?",
+    content: "The early registration deadline is 15 March 2026.",
+  },
+  {
+    title: "Do I have to pay by credit card online or can I be invoiced?",
+    content:
+      "All registrations are paid for online. However, if this is not possible, please contact the HEALTHMED-IC 2026 Conference Manager directly.",
+  },
+  {
+    title: "Can I pay in my local currency?",
+    content:
+      "All payments must be made in either USD or IDR to ensure that the full amount is received. Detailed information can be seen in the Registration page.",
+  },
+  {
+    title: "Can I get a receipt for my payment to attend the conference?",
+    content:
+      "Receipts will be issued electronically via email and this will be the only form of receipt.",
+  },
+  {
+    title:
+      "How can I receive an invitation letter to the conference for my VISA application?",
+    content:
+      "We only provide information confirming that you are listed as an attendee of the conference. We cannot guarantee that it can be used for a VISA application.",
+  },
+]
 ---
 
 <section class="flex w-full justify-center overflow-hidden bg-red-50 px-4">
@@ -22,228 +70,28 @@ import {
       <div class="h-full w-full"></div>
 
       <ItemGroup className="gap-2">
-        <Item
-          variant="outline"
-          className="items-start bg-card shadow-[inset_0_0_10px_rgba(0,0,0,.1)]"
-        >
-          <ItemMedia variant="icon">
-            <HugeiconsIcon
-              icon={BubbleChatQuestionIcon}
-              size={16}
-              color="currentColor"
-            />
-          </ItemMedia>
+        {
+          questions.map((faq) => (
+            <Item
+              variant="outline"
+              className="items-start bg-card shadow-[inset_0_0_10px_rgba(0,0,0,.1)] hover:-translate-y-1 transition-transform"
+            >
+              <ItemMedia variant="icon">
+                <HugeiconsIcon
+                  icon={BubbleChatQuestionIcon}
+                  size={16}
+                  color="currentColor"
+                />
+              </ItemMedia>
 
-          <ItemContent>
-            <ItemTitle className="text-red-950">
-              When will I be able to register for the conference?
-            </ItemTitle>
+              <ItemContent>
+                <ItemTitle className="text-red-950">{faq.title}</ItemTitle>
 
-            <p class="text-slate-600">
-              Registration is now open for participants, while presenters can
-              register after receiving notification of paper acceptance. Please
-              visit the HEALTHMED-IC 2026 Registration Page for full details on
-              fees and policies.
-            </p>
-          </ItemContent>
-        </Item>
-
-        <Item
-          variant="outline"
-          className="items-start bg-card shadow-[inset_0_0_10px_rgba(0,0,0,.1)]"
-        >
-          <ItemMedia variant="icon">
-            <HugeiconsIcon
-              icon={BubbleChatQuestionIcon}
-              size={16}
-              color="currentColor"
-            />
-          </ItemMedia>
-
-          <ItemContent>
-            <ItemTitle className="text-red-950">
-              What do I need to submit during the registration process?
-            </ItemTitle>
-
-            <p class="text-slate-600">
-              If you do not intend to publish your research, you may submit an
-              abstract only. Otherwise, you are required to submit a full paper
-              from the outset.
-            </p>
-          </ItemContent>
-        </Item>
-
-        <Item
-          variant="outline"
-          className="items-start bg-card shadow-[inset_0_0_10px_rgba(0,0,0,.1)]"
-        >
-          <ItemMedia variant="icon">
-            <HugeiconsIcon
-              icon={BubbleChatQuestionIcon}
-              size={16}
-              color="currentColor"
-            />
-          </ItemMedia>
-
-          <ItemContent>
-            <ItemTitle className="text-red-950">
-              How do I view the program online?
-            </ItemTitle>
-
-            <p class="text-slate-600">
-              The program will be updated on the conference website as it is
-              confirmed. This will be closer to the conference, after the Final
-              Camera-Ready Submission deadline.
-            </p>
-          </ItemContent>
-        </Item>
-
-        <Item
-          variant="outline"
-          className="items-start bg-card shadow-[inset_0_0_10px_rgba(0,0,0,.1)]"
-        >
-          <ItemMedia variant="icon">
-            <HugeiconsIcon
-              icon={BubbleChatQuestionIcon}
-              size={16}
-              color="currentColor"
-            />
-          </ItemMedia>
-
-          <ItemContent>
-            <ItemTitle className="text-red-950">
-              How do I get to the conference?
-            </ItemTitle>
-
-            <p class="text-slate-600">
-              Details on how to travel to the conference are available on the
-              Venue page.
-            </p>
-          </ItemContent>
-        </Item>
-
-        <Item
-          variant="outline"
-          className="items-start bg-card shadow-[inset_0_0_10px_rgba(0,0,0,.1)]"
-        >
-          <ItemMedia variant="icon">
-            <HugeiconsIcon
-              icon={BubbleChatQuestionIcon}
-              size={16}
-              color="currentColor"
-            />
-          </ItemMedia>
-
-          <ItemContent>
-            <ItemTitle className="text-red-950">
-              When is the early registration deadline?
-            </ItemTitle>
-
-            <p class="text-slate-600">
-              The early registration deadline is 15 March 2026.
-            </p>
-          </ItemContent>
-        </Item>
-
-        <Item
-          variant="outline"
-          className="items-start bg-card shadow-[inset_0_0_10px_rgba(0,0,0,.1)]"
-        >
-          <ItemMedia variant="icon">
-            <HugeiconsIcon
-              icon={BubbleChatQuestionIcon}
-              size={16}
-              color="currentColor"
-            />
-          </ItemMedia>
-
-          <ItemContent>
-            <ItemTitle className="text-red-950">
-              Do I have to pay by credit card online or can I be invoiced?
-            </ItemTitle>
-
-            <p class="text-slate-600">
-              All registrations are paid for online. However, if this is not
-              possible, please contact the HEALTHMED-IC 2026 Conference Manager
-              directly.
-            </p>
-          </ItemContent>
-        </Item>
-
-        <Item
-          variant="outline"
-          className="items-start bg-card shadow-[inset_0_0_10px_rgba(0,0,0,.1)]"
-        >
-          <ItemMedia variant="icon">
-            <HugeiconsIcon
-              icon={BubbleChatQuestionIcon}
-              size={16}
-              color="currentColor"
-            />
-          </ItemMedia>
-
-          <ItemContent>
-            <ItemTitle className="text-red-950">
-              Can I pay in my local currency?
-            </ItemTitle>
-
-            <p class="text-slate-600">
-              All payments must be made in either USD or IDR to ensure that the
-              full amount is received. Detailed information can be seen in the
-              Registration page.
-            </p>
-          </ItemContent>
-        </Item>
-
-        <Item
-          variant="outline"
-          className="items-start bg-card shadow-[inset_0_0_10px_rgba(0,0,0,.1)]"
-        >
-          <ItemMedia variant="icon">
-            <HugeiconsIcon
-              icon={BubbleChatQuestionIcon}
-              size={16}
-              color="currentColor"
-            />
-          </ItemMedia>
-
-          <ItemContent>
-            <ItemTitle className="text-red-950">
-              Can I get a receipt for my payment to attend the conference?
-            </ItemTitle>
-
-            <p class="text-slate-600">
-              Receipts will be issued electronically via email and this will be
-              the only form of receipt.
-            </p>
-          </ItemContent>
-        </Item>
-
-        <Item
-          variant="outline"
-          className="items-start bg-card shadow-[inset_0_0_10px_rgba(0,0,0,.1)]"
-        >
-          <ItemMedia variant="icon">
-            <HugeiconsIcon
-              icon={BubbleChatQuestionIcon}
-              size={16}
-              color="currentColor"
-            />
-          </ItemMedia>
-
-          <ItemContent>
-            <ItemTitle className="text-red-950">
-              How can I receive an invitation letter to the conference for my
-              VISA application?
-            </ItemTitle>
-
-            <p class="text-slate-600">
-              We only provide information confirming that you are listed as an
-              attendee of the conference. We cannot guarantee that it can be
-              used for a VISA application.
-            </p>
-          </ItemContent>
-        </Item>
+                <p class="text-slate-600">{faq.content}</p>
+              </ItemContent>
+            </Item>
+          ))
+        }
       </ItemGroup>
     </div>
   </div>

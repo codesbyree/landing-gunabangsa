@@ -1,9 +1,16 @@
 ---
 import Layout from "@/layouts/main.astro"
+import Breadcrumbs from "@/components/shared/breadcrumbs.astro"
+import QuestionsSection from "@/components/author-faq-page/questions-section.astro"
 ---
 
 <Layout>
+  <Breadcrumbs
+    pageName="Paper Upload FAQs"
+    coverImageUrl="/assets/images/hero-carousel/slide - 3.webp"
+  />
+
   <main>
-    <h1>Hello from Paper Upload QAs Page</h1>
+    <QuestionsSection />
   </main>
 </Layout>

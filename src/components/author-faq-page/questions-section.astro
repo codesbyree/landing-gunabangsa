@@ -1,0 +1,87 @@
+---
+import { HugeiconsIcon } from "@hugeicons/react"
+import { BubbleChatQuestionIcon } from "@hugeicons/core-free-icons"
+
+import SectionTitleAlt from "@/components/shared/section-title-alt.astro"
+import {
+  Item,
+  ItemTitle,
+  ItemContent,
+  ItemMedia,
+  ItemGroup,
+} from "@/components/ui/item"
+
+const questions = [
+  {
+    title:
+      "How do I upload my Revised Manuscript or Final Camera-Ready Manuscript?",
+    content:
+      "Please visit the Revised Submission Instructions and Final Camera-Ready Submission Instructions webpages for detailed step-by-step guidance. If you have questions, kindly review all information provided on these instruction pages as well as the FAQs below before contacting the Secretariat.",
+  },
+  {
+    title: "Can I submit my final manuscript by email?",
+    content:
+      "All final manuscripts must be submitted through IGERS in Microsoft Word format before the submission deadline. If you are unable to do so, please review the FAQ section below for further support.",
+  },
+  {
+    title: "I need to register more than one paper. How can I do that?",
+    content:
+      "Additional manuscripts may be submitted using the same account by selecting the New Submission option in the menu.",
+  },
+  {
+    title:
+      "Do I need to pay the registration fee before I can upload my final manuscript?",
+    content:
+      "No. However, please note that your paper will not proceed further in the review process nor continue to publisher processing until registration payment has been completed.",
+  },
+  {
+    title:
+      "My submitted manuscript does not include author details due to the double-anonymized review process. How should I add the correct author information in the Final Camera-Ready version?",
+    content:
+      "You must include complete and accurate author details (full names, affiliations, and emails) in the Final Camera-Ready version. Manuscripts missing proper author information will be considered incomplete.",
+  },
+  {
+    title:
+      "I received a rejection notice for my paper without any review. What could be the reason?",
+    content:
+      "The paper does not match the scope/topic of the conference, there are critical errors in the writing, it is a duplicate submission, or a paper that has already been published elsewhere.",
+  },
+]
+---
+
+<section class="flex w-full justify-center overflow-hidden bg-red-50 px-4">
+  <div class="flex w-full max-w-7xl flex-1 flex-col py-26">
+    <SectionTitleAlt title="Paper Upload FAQs" subtitle="FAQ" />
+
+    <div
+      class="relative grid grid-cols-1 gap-4 md:grid-cols-[.55fr_1fr] md:gap-10 lg:gap-20"
+    >
+      <div class="h-full w-full"></div>
+
+      <ItemGroup className="gap-2">
+        {
+          questions.map((faq) => (
+            <Item
+              variant="outline"
+              className="items-start bg-card shadow-[inset_0_0_10px_rgba(0,0,0,.1)] hover:-translate-y-1 transition-transform"
+            >
+              <ItemMedia variant="icon">
+                <HugeiconsIcon
+                  icon={BubbleChatQuestionIcon}
+                  size={16}
+                  color="currentColor"
+                />
+              </ItemMedia>
+
+              <ItemContent>
+                <ItemTitle className="text-red-950">{faq.title}</ItemTitle>
+
+                <p class="text-slate-600">{faq.content}</p>
+              </ItemContent>
+            </Item>
+          ))
+        }
+      </ItemGroup>
+    </div>
+  </div>
+</section>
