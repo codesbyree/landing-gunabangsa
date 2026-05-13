@@ -1,9 +1,15 @@
 ---
 import Layout from "@/layouts/main.astro"
+import Breadcrumbs from "@/components/shared/breadcrumbs.astro"
+import PreparationSection from "@/components/revised-submission-page/preparation-section/index.astro"
 ---
 
 <Layout>
+  <Breadcrumbs
+    pageName="Revised Submission Instructions"
+    coverImageUrl="/assets/images/hero-carousel/slide - 2.webp"
+  />
   <main>
-    <h1>Hello from Revised Submission Instructions Page</h1>
+    <PreparationSection />
   </main>
 </Layout>
