@@ -20,7 +20,9 @@ import Footer from "@/components/shared/footer.astro"
   </head>
   <body>
     <Navigation />
-    <slot />
+    <div class="relative z-2">
+      <slot />
+    </div>
     <Footer />
   </body>
 </html>
