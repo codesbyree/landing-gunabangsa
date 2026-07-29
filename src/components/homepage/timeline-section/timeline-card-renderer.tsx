@@ -5,44 +5,42 @@ const timelineData: TimelineTypes[] = [
   {
     title: "Paper Submission Deadline",
     description: "Submit your full papers via our online submission system.",
-    date: "July 15, 2026",
+    date: "August 31, 2026",
     status: "Open",
-    // Fixed: Added leading zero to day
     start_date: "2026-01-01T00:00:00.000Z",
-    end_date: "2026-07-15T23:59:59.999Z",
+    end_date: "2026-08-31T23:59:59.999Z",
   },
   {
     title: "Notification of Acceptance",
     description: "Authors will be notified of the review outcome.",
-    date: "September 15, 2026",
+    date: "September 30, 2026",
     status: "Upcoming",
-    start_date: "2026-07-16T00:00:00.000Z",
-    end_date: "2026-09-15T23:59:59.999Z",
+    start_date: "2026-09-01T00:00:00.000Z",
+    end_date: "2026-09-30T23:59:59.999Z",
   },
   {
     title: "Early Bird Registration Deadline",
     description: "Take advantage of discounted registration fees.",
     date: "September 30, 2026",
     status: "Upcoming",
-    start_date: "2026-09-16T00:00:00.000Z",
+    start_date: "2026-09-01T00:00:00.000Z",
     end_date: "2026-09-30T23:59:59.999Z",
   },
   {
     title: "Final Camera-Ready Paper Submission",
     description:
       "Submit your final, revised papers formatted according to author guidelines.",
-    date: "October 15, 2026",
+    date: "October 19, 2026",
     status: "Upcoming",
-    // Logic Fix: Changed start to Oct 01 (leading zero) to bridge the gap from Sept 30
     start_date: "2026-10-01T00:00:00.000Z",
-    end_date: "2026-10-15T23:59:59.999Z",
+    end_date: "2026-10-19T23:59:59.999Z",
   },
   {
     title: "Regular Registration Deadline",
     description: "Final deadline for all presenters and participants.",
     date: "October 30, 2026",
     status: "Upcoming",
-    start_date: "2026-10-16T00:00:00.000Z",
+    start_date: "2026-10-20T00:00:00.000Z",
     end_date: "2026-10-30T23:59:59.999Z",
   },
   {
@@ -51,7 +49,6 @@ const timelineData: TimelineTypes[] = [
       "Join us for three days of insightful presentations, discussions, and networking.",
     date: "November 5-7, 2026",
     status: "Event",
-    // Fixed: Added leading zero to day
     start_date: "2026-11-05T00:00:00.000Z",
     end_date: "2026-11-07T23:59:59.999Z",
   },

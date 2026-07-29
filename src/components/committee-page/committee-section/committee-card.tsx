@@ -4,7 +4,6 @@ import {
   ItemContent,
   ItemTitle,
   ItemDescription,
-  ItemActions,
 } from "@/components/ui/item"
 
 export type CommitteeTypes = {
@@ -24,13 +23,13 @@ export default function CommitteeCard({
       className="bg-card shadow-[inset_0_0_10px_rgba(0,0,0,0.1)] transition-all hover:-translate-y-1"
     >
       <ItemContent>
-        <ItemTitle>{name}</ItemTitle>
-        <ItemDescription>{affiliation}</ItemDescription>
-      </ItemContent>
+        <Badge variant="outline" className="mb-4">
+          {role}
+        </Badge>
 
-      <ItemActions>
-        <Badge variant="outline">{role}</Badge>
-      </ItemActions>
+        <ItemTitle>{name}</ItemTitle>
+        <ItemDescription className="text-sm">{affiliation}</ItemDescription>
+      </ItemContent>
     </Item>
   )
 }

@@ -2,13 +2,14 @@ import SpeakerCard, { type SpeakerTypes } from "./speaker-card"
 
 const keynoteSpeakers: SpeakerTypes[] = [
   {
-    name: "To be announced",
-    affiliation: "To be announced",
-    academic_background: "To be announced",
-    image: "/assets/images/speakers/placeholder.jpg",
-    topic: "To be announced",
-    session: "To be announced",
-    type: "keynote",
+    name: "Dr. Fitri Nadifah, S.Si., M.Sc.",
+    affiliation: "STIKES Guna Bangsa Yogyakarta, Indonesia",
+    academic_background:
+      "Dr. Fitri Nadifah is a distinguished researcher and academic at STIKES Guna Bangsa Yogyakarta, contributing to advancements in biomedical and health sciences.",
+    topic: "Healthcare Innovation & Life Sciences",
+    session: "Nov 5–7, 2026",
+    type: "keynote" as const,
+    image: "/assets/images/speakers/fitri-nadifah.jpg",
   },
 ]
 
@@ -32,16 +33,6 @@ const invitedSpeakers: SpeakerTypes[] = [
     session: "Nov 5–7, 2026",
     type: "invited" as const,
     image: "/assets/images/speakers/anita-nur-mayani.jpg",
-  },
-  {
-    name: "Dr. Fitri Nadifah, S.Si., M.Sc.",
-    affiliation: "STIKES Guna Bangsa Yogyakarta, Indonesia",
-    academic_background:
-      "Dr. Fitri Nadifah is a distinguished researcher and academic at STIKES Guna Bangsa Yogyakarta, contributing to advancements in biomedical and health sciences.",
-    topic: "Healthcare Innovation & Life Sciences",
-    session: "Nov 5–7, 2026",
-    type: "invited" as const,
-    image: "/assets/images/speakers/fitri-nadifah.jpg",
   },
 ]
 
