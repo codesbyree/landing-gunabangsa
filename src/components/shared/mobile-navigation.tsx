@@ -42,7 +42,6 @@ const mainLinks = [
   { title: "Registration Fees", href: "/registrations" },
   { title: "Our Partners", href: "/our-partners" },
   { title: "FAQs", href: "/faq" },
-  { title: "Gallery", href: "/gallery" },
 ]
 
 export default function MobileNavigation() {

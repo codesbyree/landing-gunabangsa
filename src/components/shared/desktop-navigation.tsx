@@ -92,12 +92,6 @@ export default function DesktopNavigation() {
             <a href="/faq">FAQs</a>
           </NavigationMenuLink>
         </NavigationMenuItem>
-
-        <NavigationMenuItem>
-          <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-            <a href="/gallery">Gallery</a>
-          </NavigationMenuLink>
-        </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
   )
