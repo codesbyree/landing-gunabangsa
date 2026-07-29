@@ -12,7 +12,6 @@ const cardContents = [
       "Use clear and high-resolution figures; avoid or replace any blurred images.",
       "If figures are reproduced from other sources, the corresponding copyright permission form must be provided for each figure.",
       "Use a reference management tool (e.g., Mendeley, Zotero) to minimize formatting errors in the references section.",
-      "The prepared Final Camera-Ready Manuscript, along with all required documents, must then be resubmitted through the IGERS system.",
     ],
     icon: (
       <HugeiconsIcon
@@ -27,18 +26,18 @@ const cardContents = [
 
 export default function PreparationCardRenderer() {
   return (
-    <div className="relative z-10 grid grid-cols-1 gap-2 bg-red-50/80 text-slate-600 lg:grid-cols-2 lg:grid-rows-2">
-      {cardContents.map((card, i) => (
+    <div className="relative z-10 grid grid-cols-1 gap-2 bg-red-50/80 text-slate-600 lg:grid-cols-2">
+      {cardContents.map((card) => (
         <PreparationSectionCard
           key={card.title}
           title={card.title}
           items={card.items}
           icon={card.icon}
-          index={i}
+          index={1}
         />
       ))}
 
-      <div className="relative overflow-hidden rounded-2xl bg-red-900 p-6 text-white shadow-[inset_0_0_10px_rgba(0,0,0,0.5)] transition-transform hover:-translate-y-1">
+      <div className="relative h-max overflow-hidden rounded-2xl bg-red-900 p-6 text-white shadow-[inset_0_0_10px_rgba(0,0,0,0.5)] transition-transform hover:-translate-y-1">
         <div className="pointer-events-none absolute right-0 bottom-0 p-10 opacity-5">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -116,7 +115,7 @@ export default function PreparationCardRenderer() {
               >
                 <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path>
               </svg>
-              <span className="text-sm font-medium">+628 111 884 108</span>
+              <span className="text-sm font-medium">+628 223 405 3409</span>
             </div>
           </div>
         </div>

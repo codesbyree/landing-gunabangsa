@@ -1,9 +1,9 @@
 ---
 import Layout from "@/layouts/main.astro"
 import Breadcrumbs from "@/components/shared/breadcrumbs.astro"
-import PreparationSection from "@/components/initial-submission-page/preparation-section/index.astro"
-import RunningText from "@/components/shared/running-text"
 import JoinAsAuthorSection from "@/components/initial-submission-page/join-as-author-section.astro"
+import CreateAccountSection from "@/components/initial-submission-page/create-account-section.astro"
+import PrepareArticleSubmissionSection from "@/components/initial-submission-page/prepare-article-submission.astro"
 ---
 
 <Layout>
@@ -12,8 +12,8 @@ import JoinAsAuthorSection from "@/components/initial-submission-page/join-as-au
     coverImageUrl="/assets/images/hero-carousel/slide - 8.webp"
   />
   <main>
-    <PreparationSection />
-    <RunningText />
+    <CreateAccountSection />
     <JoinAsAuthorSection />
+    <PrepareArticleSubmissionSection />
   </main>
 </Layout>

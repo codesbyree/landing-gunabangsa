@@ -6,9 +6,9 @@ import SectionTitle from "@/components/shared/section-title.astro"
 <section class="flex w-full justify-center bg-white px-4">
   <div class="flex w-full max-w-6xl flex-1 flex-col py-26 2xl:max-w-7xl">
     <SectionTitle
-      title="How to Join as Author"
-      subtitle="AUTHOR"
-      description="After you have your IGERS account, it's time to submit your manuscript. Make sure to follow the steps below."
+      title="Create an IGERS Account"
+      subtitle="ACCOUNT"
+      description="You are required to create an IGERS account to submit your manuscript."
     />
 
     <div
@@ -16,12 +16,11 @@ import SectionTitle from "@/components/shared/section-title.astro"
     >
       {
         [
-          "Login to IGERS.",
-          "Click the Acronym of the conference you wish to participate in from the list.",
-          "Click the 'Join as Author' button on the conference detail page.",
-          "On the New Submission page, fill in metadata: category, author info, title, and abstract.",
-          "Upload your paper in the required format and click the 'Submit' button.",
-          "The conference team will contact you regarding your submission via your registered email.",
+          `Go to igers.org/register. Or click "Register Now" button on the top-right corner of this website.`,
+          "In the register page, fill out all the required fields, then click Continue.",
+          "After creating an account, you will be prompted to verify your email.",
+          `Check your inbox for the verification email. If it's missing or expired, follow the "My verification link is expired, what should I do?" tutorial to request a new one.`,
+          "After verifying your email address, you will be automatically redirected to your dashboard.",
         ].map((step, index) => (
           <AspectRatio ratio={3 / 4}>
             <div class="h-full w-full overflow-hidden rounded-2xl shadow-sm shadow-red-950/50 transition-all hover:-translate-y-1 hover:opacity-90">
