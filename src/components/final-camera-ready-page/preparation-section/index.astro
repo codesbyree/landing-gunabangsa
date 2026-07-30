@@ -8,76 +8,45 @@ import SectionTitleAlt from "@/components/shared/section-title-alt.astro"
 import PreparationCardRenderer from "./preparation-card-renderer"
 ---
 
-<section class="flex w-full justify-center overflow-hidden bg-red-50 px-4">
+<section class="flex w-full justify-center overflow-hidden bg-red-50 px-4 xl:rounded-br-4xl xl:rounded-bl-4xl">
   <div class="flex w-full max-w-6xl flex-1 flex-col py-26 2xl:max-w-7xl">
-    <SectionTitleAlt
-      title="Preparing Your Final Camera-Ready Manuscript"
-      subtitle="PREPARATION"
-    />
+    <SectionTitleAlt title="Preparing Your Final Camera-Ready Manuscript" subtitle="PREPARATION" />
 
-    <div
-      class="relative grid grid-cols-1 gap-4 md:grid-cols-[.55fr_1fr] md:gap-10 lg:gap-20"
-    >
+    <div class="relative grid grid-cols-1 gap-4 md:grid-cols-[.55fr_1fr] md:gap-10 lg:gap-20">
       <div></div>
 
       <div class="flex flex-col gap-4 text-slate-600">
         <p>
-          After completing all revisions, all accepted papers must be prepared
-          as a Final Camera-Ready Manuscript. This is the final step in the
-          submission process, required after your paper has been officially
-          accepted for publication.
+          After completing all revisions, all accepted papers must be prepared as a Final Camera-Ready Manuscript. This is the final step in the
+          submission process, required after your paper has been officially accepted for publication.
         </p>
 
-        <p>
-          Each accepted paper requires authors to prepare their final
-          camera-ready manuscript using two distinct templates:
-        </p>
+        <p>Each accepted paper requires authors to prepare their final camera-ready manuscript using two distinct templates:</p>
 
         <div class="mb-4 flex gap-2">
-          <a
-            href="https://www.mdpi.com/journal/engproc/instructions"
-            target="_blank"
-            class={cn(buttonVariants({ variant: "default" }))}
+          <a href="https://www.mdpi.com/journal/engproc/instructions" target="_blank" class={cn(buttonVariants({ variant: "default" }))}
             >MDPI Paper Template
-            <HugeiconsIcon
-              icon={DownloadIcon}
-              size={16}
-              color="currentcolor"
-              className="shrink-0"
-            />
+            <HugeiconsIcon icon={DownloadIcon} size={16} color="currentcolor" className="shrink-0" />
           </a>
-          <a
-            href="https://pubs.aip.org/aip/acp/pages/preppapers"
-            target="_blank"
-            class={cn(buttonVariants({ variant: "default" }))}
+          <a href="https://pubs.aip.org/aip/acp/pages/preppapers" target="_blank" class={cn(buttonVariants({ variant: "default" }))}
             >AIP Paper Template
-            <HugeiconsIcon
-              icon={DownloadIcon}
-              size={16}
-              color="currentcolor"
-              className="shrink-0"
-            />
+            <HugeiconsIcon icon={DownloadIcon} size={16} color="currentcolor" className="shrink-0" />
           </a>
         </div>
 
         <p>
-          In addition to templating, authors are required to complete the AIP
-          Publishing License Agreement. You can download the license form <a
+          In addition to templating, authors are required to complete the AIP Publishing License Agreement. You can download the license form <a
             href="https://pubs.aip.org/aip/acp/pages/preppapers"
             target="_blank"
             class="text-blue-500">here</a
-          >. For guidance, please refer to this example of a completed AIP
-          license agreement <a
+          >. For guidance, please refer to this example of a completed AIP license agreement <a
             href="https://pubs.aip.org/aip/acp/pages/preppapers*"
             target="_blank"
             class="text-blue-500">here</a
           >.
         </p>
 
-        <p>
-          The prepared Final Camera-Ready Manuscript, along with all required
-          documents, must then be resubmitted through the IGERS system.
-        </p>
+        <p>The prepared Final Camera-Ready Manuscript, along with all required documents, must then be resubmitted through the IGERS system.</p>
 
         <PreparationCardRenderer />
       </div>

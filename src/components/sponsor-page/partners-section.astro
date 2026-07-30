@@ -1,0 +1,63 @@
+---
+import SectionTitle from "@/components/shared/section-title.astro"
+import PartnerCard from "./partner-card.astro"
+import { Separator } from "../ui/separator"
+---
+
+<section class="flex w-full justify-center bg-red-50 px-4 xl:rounded-br-4xl xl:rounded-bl-4xl">
+  <div class="flex w-full max-w-6xl flex-1 flex-col py-26 2xl:max-w-7xl">
+    <SectionTitle
+      title="Collaborating for Global Impact"
+      subtitle="OUR PARTNERS"
+      description="Meet the forward-thinking organizations and health-tech leaders whose support empowers us to bridge the gap between biomedical research and real-world clinical solutions."
+    />
+
+    <div class="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-10">
+      <div></div>
+
+      <div class="flex flex-col gap-8">
+        <PartnerCard title="İstanbul Gelişim Üniversitesi" image="/assets/images/gelisim.png">
+          <p>
+            İstanbul Gelişim Üniversitesi (IGU), established in 2008 and located in the vibrant city of Istanbul, Türkiye, is a leading higher
+            education institution renowned for its rapid growth and strong commitment to internationalization. Strategically situated at the
+            crossroads of Europe and Asia, IGU has positioned itself as a global hub for academic excellence and innovation. As a testament to its
+            world-class standards, IGU was the only Turkish university to reach the finals for the "Best Internationalization Strategy" at the Times
+            Higher Education (THE) Asia Awards in 2019, often referred to as the "Oscars of Higher Education." This recognition highlights the
+            university’s visionary approach to global scholarship and its success in fostering a multicultural academic environment.
+          </p>
+
+          <p>
+            With an extensive global network, IGU maintains exchange programs with over 155 universities under the Erasmus+ framework and holds
+            academic cooperation agreements with 33 prestigious institutions worldwide. The university is dedicated to producing graduates who possess
+            a global perspective, supported by high-quality research facilities and a safe, dynamic campus life in the heart of Turkey’s financial and
+            commercial center.
+          </p>
+
+          <p>
+            By serving as a co-host for this conference, İstanbul Gelişim Üniversitesi continues its mission to bridge continents and disciplines,
+            facilitating high-level intellectual exchange and driving purposeful action toward global sustainable development.
+          </p>
+        </PartnerCard>
+
+        <Separator />
+
+        <PartnerCard title="Nutral" image="/assets/images/nutral.jpg">
+          <p>
+            Nutral.id, based in Sukabumi and associated with Nusa Putra University, focuses on connecting higher education with industry to boost
+            employability, drive innovation, and solve real-world challenges.
+          </p>
+
+          <p>
+            The organization provides key academic services, including scholarly publishing through the Nutral Academy Publisher and end-to-end
+            conference management, frequently hosting global events for researchers and professionals.
+          </p>
+
+          <p>
+            Additionally, Nutral partners with various institutions and businesses to co-host events, publish special research issues, and create
+            custom training programs that empower the academic community.
+          </p>
+        </PartnerCard>
+      </div>
+    </div>
+  </div>
+</section>

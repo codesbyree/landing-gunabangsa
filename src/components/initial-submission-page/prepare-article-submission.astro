@@ -3,7 +3,7 @@ import { AspectRatio } from "../ui/aspect-ratio"
 import SectionTitle from "@/components/shared/section-title.astro"
 ---
 
-<section class="flex w-full justify-center bg-white px-4">
+<section class="flex w-full justify-center bg-white px-4 xl:rounded-br-4xl xl:rounded-bl-4xl">
   <div class="flex w-full max-w-6xl flex-1 flex-col py-26 2xl:max-w-7xl">
     <SectionTitle
       title="Preparing Article Submission"
@@ -11,9 +11,7 @@ import SectionTitle from "@/components/shared/section-title.astro"
       description="Submit your research and join our community of scholars. Follow our streamlined process to publish your work in modern health sciences."
     />
 
-    <div
-      class="grid w-full grid-cols-1 gap-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5"
-    >
+    <div class="grid w-full grid-cols-1 gap-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
       {
         [
           "Ensure that the manuscript aligns with the scope and topics of the conference. No specific template format is required for the initial submission.",
@@ -27,9 +25,7 @@ import SectionTitle from "@/components/shared/section-title.astro"
           <AspectRatio ratio={3 / 4}>
             <div class="h-full w-full overflow-hidden rounded-2xl shadow-sm shadow-red-950/50 transition-all hover:-translate-y-1 hover:opacity-90">
               <div class="relative flex h-full w-full flex-col justify-end gap-2 rounded-2xl border border-red-950 bg-red-900 p-6 shadow-[inset_0_0_10px_rgba(0,0,0,1)]">
-                <p class="absolute top-6 left-6 text-7xl font-black text-white/30">
-                  {index + 1}
-                </p>
+                <p class="absolute top-6 left-6 text-7xl font-black text-white/30">{index + 1}</p>
                 <p class="font-medium text-white">{step}</p>
               </div>
             </div>

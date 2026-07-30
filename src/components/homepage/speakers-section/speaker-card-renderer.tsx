@@ -11,6 +11,17 @@ const keynoteSpeakers: SpeakerTypes[] = [
     type: "keynote" as const,
     image: "/assets/images/speakers/fitri-nadifah.jpg",
   },
+  {
+    name: "Achmad Rizal Purnama",
+    affiliation: "Ambasador of Indonesia to Turkiye",
+    academic_background:
+      "Achmad Rizal Purnama is an Indonesian diplomat currently serving as the Ambassador of Indonesia to Turkey. Prior to his ambassadorship, he served as the director for Middle East and chief of staff to the foreign minister.",
+    session: "",
+    type: "keynote" as const,
+    topic: "",
+    image: "/assets/images/speakers/achmad.webp",
+    confirmed: false,
+  },
 ]
 
 const invitedSpeakers: SpeakerTypes[] = [
@@ -39,19 +50,15 @@ const invitedSpeakers: SpeakerTypes[] = [
 export default function SpeakerCardRenderer() {
   return (
     <div className="flex flex-col gap-4">
-      <h2 className="text-lg font-medium text-red-800 md:text-xl">
-        Keynote Speakers
-      </h2>
+      <h2 className="text-lg font-medium text-red-800 md:text-xl">Keynote Speakers</h2>
 
-      <div className="mb-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+      <div className="mb-4 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
         {keynoteSpeakers.map((speaker, index) => (
           <SpeakerCard key={index} {...speaker} />
         ))}
       </div>
 
-      <h2 className="text-lg font-medium text-red-800 md:text-xl">
-        Invited Speakers
-      </h2>
+      <h2 className="text-lg font-medium text-red-800 md:text-xl">Invited Speakers</h2>
 
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
         {invitedSpeakers.map((speaker, index) => (

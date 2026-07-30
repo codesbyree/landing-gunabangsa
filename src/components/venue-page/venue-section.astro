@@ -1,93 +1,144 @@
 ---
-import SectionTitleAlt from "@/components/shared/section-title-alt.astro"
-import { Location03Icon } from "@hugeicons/core-free-icons"
+import SectionTitle from "@/components/shared/section-title.astro"
+import { Call02Icon, InternetIcon, Location03Icon, Mail01Icon, MailIcon } from "@hugeicons/core-free-icons"
 import { HugeiconsIcon } from "@hugeicons/react"
-import { AspectRatio } from "../ui/aspect-ratio"
 ---
 
-<section
-  class="flex min-h-dvh w-full justify-center overflow-hidden bg-red-50 px-4"
->
+<section class="flex w-full justify-center overflow-hidden bg-white px-4 xl:rounded-br-4xl xl:rounded-bl-4xl">
   <div class="flex w-full max-w-6xl flex-1 flex-col py-26 2xl:max-w-7xl">
-    <SectionTitleAlt
-      title="İstanbul Gelişim Üniversitesi Tower"
-      subtitle="VENUE"
-    />
+    <SectionTitle title="İstanbul Gelişim Üniversitesi Tower" subtitle="VENUE" description="" />
 
-    <div
-      class="relative grid grid-cols-1 gap-4 md:grid-cols-[.55fr_1fr] md:gap-10 lg:gap-20"
-    >
-      <div class="h-full w-full">
-        <div
-          class="absolute -top-20 -left-70 z-5 hidden h-full w-full max-w-2xl transition-opacity hover:opacity-0 md:block"
-        >
-          <AspectRatio ratio={1 / 1}>
-            <img src="/assets/images/venue-ilustration.jpg" alt="" />
-          </AspectRatio>
-        </div>
-
-        <div
-          class="absolute -top-20 -left-70 z-1 hidden h-full w-full max-w-2xl transition-opacity hover:opacity-0 md:block"
-        >
-          <AspectRatio ratio={1 / 1}>
-            <img src="/assets/images/venue-ilustration-real.webp" alt="" />
-          </AspectRatio>
-        </div>
-      </div>
-
-      <div
-        class="relative z-10 flex flex-col gap-4 bg-red-50/80 text-slate-600 md:text-justify"
-      >
+    <div class="relative grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-10 lg:gap-20">
+      <div class="relative z-10 flex flex-col gap-4 text-slate-600 md:text-justify">
         <p>
-          Join us at the state-of-the-art İstanbul Gelişim Üniversitesi Tower,
-          designed to inspire collaboration and innovation in medical sciences.
-          The venue features modern auditoriums, interactive exhibition spaces,
-          and comfortable networking areas.
+          The 1st Healthcare Excellence and Advancements in Life Treatment & Human Medicine – International Conference (HEALTHMED-IC) will be proudly
+          hosted at the prestigious İstanbul Gelişim Üniversitesi.
         </p>
 
-        <div
-          class="space-y-6 rounded-xl border border-red-200 bg-red-100 p-6 shadow-[inset_0_0_10px_rgba(0,0,0,0.1)]"
-        >
+        <p>
+          İstanbul Gelişim Üniversitesi is a dynamic and rapidly growing institution in Istanbul, Turkey. With modern facilities, strong academic
+          commitment, and a vibrant campus, it provides an ideal venue for scholarly exchange and networking. Its strategic location also offers
+          participants the unique opportunity to experience Istanbul’s rich cultural heritage and contemporary vitality as a city bridging continents.
+        </p>
+
+        <div class="space-y-6 rounded-xl border border-red-100 bg-red-50 p-6 shadow-[inset_0_0_10px_rgba(0,0,0,0.1)]">
           <h4 class="text-heading text-red-900">Contact & Address</h4>
 
           <div class="space-y-4">
             <div class="flex gap-4">
               <div
-                class="grid h-10 w-10 place-items-center rounded-full border-border bg-slate-50 text-red-900 shadow-[inset_2px_2px_2px_rgba(0,0,0,0.1)]"
+                class="grid h-10 w-10 shrink-0 place-items-center rounded-full border-border bg-slate-50 text-red-900 shadow-[inset_2px_2px_2px_rgba(0,0,0,0.1)]"
               >
-                <HugeiconsIcon
-                  icon={Location03Icon}
-                  size={24}
-                  color="currentColor"
-                />
+                <HugeiconsIcon icon={Location03Icon} size={20} color="currentColor" />
               </div>
 
               <div>
-                <p class="text-red-900">Address</p>
-                <p>
-                  Cihangir, Petrol Ofisi Cd. No:5 34310 Avcılar/İstanbul,
-                  Türkiye
-                </p>
+                <p class="text-sm text-red-900">Address</p>
+                <a href="https://maps.app.goo.gl/y5c4eUeP4Ct7oHR48" target="_blank">Cihangir, Petrol Ofisi Cd. No:5 34310 Avcılar/İstanbul, Türkiye</a
+                >
               </div>
             </div>
 
             <div class="flex gap-4">
               <div
-                class="grid h-10 w-10 place-items-center rounded-full border-border bg-slate-50 text-red-900 shadow-[inset_2px_2px_2px_rgba(0,0,0,0.1)]"
+                class="grid h-10 w-10 shrink-0 place-items-center rounded-full border-border bg-slate-50 text-red-900 shadow-[inset_2px_2px_2px_rgba(0,0,0,0.1)]"
               >
-                <HugeiconsIcon
-                  icon={Location03Icon}
-                  size={24}
-                  color="currentColor"
-                />
+                <HugeiconsIcon icon={Call02Icon} size={20} color="currentColor" />
               </div>
 
               <div>
-                <p class="text-red-900">Phone</p>
-                <p>+1 (555) 123-4567</p>
+                <p class="text-sm text-red-900">Phone</p>
+                <p>0212 422 70 00</p>
+              </div>
+            </div>
+
+            <div class="flex gap-4">
+              <div
+                class="grid h-10 w-10 shrink-0 place-items-center rounded-full border-border bg-slate-50 text-red-900 shadow-[inset_2px_2px_2px_rgba(0,0,0,0.1)]"
+              >
+                <HugeiconsIcon icon={Mail01Icon} size={20} color="currentColor" />
+              </div>
+
+              <div>
+                <p class="text-sm text-red-900">Email</p>
+                <a href="mailto:rektorluk@gelisim.edu.tr" target="_blank">rektorluk@gelisim.edu.tr</a>
               </div>
             </div>
           </div>
+        </div>
+      </div>
+
+      <div class="row-start-1 grid grid-cols-2 gap-2 lg:col-start-2 lg:row-start-1">
+        <div class="relative col-span-2 overflow-hidden bg-red-100">
+          <img src="/assets/images/landmark-2.webp" alt="" class="inset-0 h-full w-full object-cover md:absolute" />
+        </div>
+
+        <div class="relative overflow-hidden bg-red-100">
+          <img src="/assets/images/landmark-3.webp" alt="" class="inset-0 h-full w-full object-cover md:absolute" />
+        </div>
+
+        <div class="relative overflow-hidden bg-red-100">
+          <img src="/assets/images/landmark-1.webp" alt="" class="inset-0 h-full w-full object-cover md:absolute" />
+        </div>
+      </div>
+
+      <div class="relative rounded-2xl border border-red-900 bg-red-900 p-6 shadow-[inset_0_0_10px_rgba(0,0,0,0.1)] lg:col-span-2">
+        <div class="mb-6 flex items-center gap-3">
+          <span class="flex h-8 w-8 items-center justify-center rounded-full border border-red-100 bg-red-50 text-red-50">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" class="h-5 w-5 rounded-sm shadow-sm"
+              ><rect fill="#ED2939" width="36" height="18"></rect><rect fill="#FFF" y="18" width="36" height="18"></rect></svg
+            >
+          </span>
+          <span class="rounded-full border px-3 py-1 text-xs font-bold tracking-wider text-red-200">Limited Offer</span>
+        </div>
+
+        <h3 class="mb-4 text-2xl leading-tight font-bold text-red-50 sm:text-3xl">Special Accommodation Package for Indonesian Participants</h3>
+
+        <p class="mb-8 text-base leading-relaxed text-red-50/70 sm:text-lg">
+          For HEALTHMED-IC participants traveling from Indonesia, we are pleased to offer a comprehensive travel and hotel accommodation package
+          through our trusted travel agent.
+        </p>
+
+        <div class="rounded-xl border border-red-600 bg-red-800 p-4">
+          <p class="mb-4 text-sm font-semibold tracking-wide text-red-50 uppercase">For booking & inquiries, contact NPU GO:</p>
+
+          <ul class="space-y-4">
+            <li>
+              <a href="https://npugo.nusaputra.ac.id" target="_blank" class="flex items-center gap-4 text-red-600 transition-colors">
+                <div class="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white shadow-sm transition-all">
+                  <HugeiconsIcon icon={InternetIcon} color="currentColor" size={20} />
+                </div>
+                <div>
+                  <p class="mb-0.5 text-xs font-medium text-red-300">Website</p>
+                  <p class="text-sm font-semibold text-red-50 sm:text-base">NPU GO</p>
+                </div>
+              </a>
+            </li>
+
+            <li>
+              <a href="tel:+628161110960" class="flex items-center gap-4 text-slate-600 transition-colors">
+                <div class="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white shadow-sm transition-all">
+                  <HugeiconsIcon icon={Call02Icon} color="currentColor" size={20} />
+                </div>
+                <div>
+                  <p class="mb-0.5 text-xs font-medium text-red-300">Phone / WhatsApp</p>
+                  <p class="text-sm font-semibold text-red-50 sm:text-base">+62 816-1110-960</p>
+                </div>
+              </a>
+            </li>
+
+            <li>
+              <a href="mailto:info@nusaputra.ac.id" class="flex items-center gap-4 text-slate-600 transition-colors">
+                <div class="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white shadow-sm transition-all">
+                  <HugeiconsIcon icon={MailIcon} color="currentColor" size={20} />
+                </div>
+                <div>
+                  <p class="mb-0.5 text-xs font-medium text-red-300">Email</p>
+                  <p class="text-sm font-semibold text-red-50 sm:text-base">info@nusaputra.ac.id</p>
+                </div>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </div>

@@ -1,0 +1,93 @@
+---
+import SectionTitle from "@/components/shared/section-title.astro"
+import { Call02Icon, InternetIcon, Location03Icon, Mail01Icon, MailIcon } from "@hugeicons/core-free-icons"
+import { HugeiconsIcon } from "@hugeicons/react"
+---
+
+<section class="flex w-full justify-center overflow-hidden bg-white px-4 xl:rounded-br-4xl xl:rounded-bl-4xl">
+  <div class="flex w-full max-w-6xl flex-1 flex-col py-26 2xl:max-w-7xl">
+    <SectionTitle title="Visa Information & Guidance" subtitle="VISA" description="" />
+
+    <div class="relative grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-10 lg:gap-20">
+      <div class="relative z-10 flex flex-col gap-4 text-slate-600 md:text-justify">
+        <p>
+          Participants planning to attend HEALTHMED-IC in Istanbul, Turkey, are advised to check their individual visa requirements well in advance of
+          their travel dates. Citizens of certain countries may need to obtain a visa to enter Turkey. To ascertain whether you require a visa, please
+          consult the official Turkish Ministry of Foreign Affairs Visa Guide available on their website. Many eligible nationalities can conveniently
+          apply for an e-Visa online through the official e-Visa application portal, which offers a straightforward process. For those not eligible
+          for an e-Visa, applications should be submitted at the nearest Turkish Embassy or Consulate in their country of residence. It is crucial to
+          ensure that your passport remains valid for at least six months beyond your intended period of stay in Turkey. We strongly recommend
+          initiating your visa application process as early as possible, as processing times can vary.
+        </p>
+
+        <div class="space-y-6 rounded-xl border border-red-100 bg-red-50 p-6 shadow-[inset_0_0_10px_rgba(0,0,0,0.1)]">
+          <h4 class="text-heading text-red-900">Do you need a letter to support your visa application for HEALTHMED-IC 2026?</h4>
+
+          <div class="space-y-4">
+            <p class="text-sm text-red-900">
+              Yes, we can provide an official letter. We offer a Letter of Invitation that includes a list of registered participants and presenters
+              for HEALTHMED-IC 2026, which you may attach to your visa application to facilitate the process.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative row-start-1 lg:col-start-2 lg:row-start-1">
+        <img src="/assets/images/passport.webp" alt="" class="inset-0 h-full w-full object-cover md:absolute" />
+      </div>
+
+      <div class="relative rounded-2xl border border-red-900 bg-red-900 p-6 shadow-[inset_0_0_10px_rgba(0,0,0,0.1)] lg:col-span-2">
+        <h3 class="mb-4 text-2xl leading-tight font-bold text-red-50 sm:text-3xl">Special Visa Assistance for Indonesian Participants</h3>
+
+        <p class="mb-8 text-base leading-relaxed text-red-50/70 sm:text-lg">
+          For ICEHoS 2026 participants traveling from Indonesia, we are pleased to offer a comprehensive travel and hotel accommodation package
+          through our trusted travel agent.
+        </p>
+
+        <div class="rounded-xl border border-red-600 bg-red-800 p-4">
+          <p class="mb-4 text-sm font-semibold tracking-wide text-red-50 uppercase">
+            For more information and assistance, please contact our partner via:
+          </p>
+
+          <ul class="space-y-4">
+            <li>
+              <a href="https://npugo.nusaputra.ac.id" target="_blank" class="flex items-center gap-4 text-red-600 transition-colors">
+                <div class="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white shadow-sm transition-all">
+                  <HugeiconsIcon icon={InternetIcon} color="currentColor" size={20} />
+                </div>
+                <div>
+                  <p class="mb-0.5 text-xs font-medium text-red-300">Website</p>
+                  <p class="text-sm font-semibold text-red-50 sm:text-base">NPU GO</p>
+                </div>
+              </a>
+            </li>
+
+            <li>
+              <a href="tel:+628161110960" class="flex items-center gap-4 text-slate-600 transition-colors">
+                <div class="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white shadow-sm transition-all">
+                  <HugeiconsIcon icon={Call02Icon} color="currentColor" size={20} />
+                </div>
+                <div>
+                  <p class="mb-0.5 text-xs font-medium text-red-300">Phone / WhatsApp</p>
+                  <p class="text-sm font-semibold text-red-50 sm:text-base">+62 816-1110-960</p>
+                </div>
+              </a>
+            </li>
+
+            <li>
+              <a href="mailto:info@nusaputra.ac.id" class="flex items-center gap-4 text-slate-600 transition-colors">
+                <div class="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white shadow-sm transition-all">
+                  <HugeiconsIcon icon={MailIcon} color="currentColor" size={20} />
+                </div>
+                <div>
+                  <p class="mb-0.5 text-xs font-medium text-red-300">Email</p>
+                  <p class="text-sm font-semibold text-red-50 sm:text-base">info@nusaputra.ac.id</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

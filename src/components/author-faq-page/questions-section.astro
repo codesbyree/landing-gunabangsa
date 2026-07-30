@@ -3,18 +3,11 @@ import { HugeiconsIcon } from "@hugeicons/react"
 import { BubbleChatQuestionIcon } from "@hugeicons/core-free-icons"
 
 import SectionTitleAlt from "@/components/shared/section-title-alt.astro"
-import {
-  Item,
-  ItemTitle,
-  ItemContent,
-  ItemMedia,
-  ItemGroup,
-} from "@/components/ui/item"
+import { Item, ItemTitle, ItemContent, ItemMedia, ItemGroup } from "@/components/ui/item"
 
 const questions = [
   {
-    title:
-      "How do I upload my Revised Manuscript or Final Camera-Ready Manuscript?",
+    title: "How do I upload my Revised Manuscript or Final Camera-Ready Manuscript?",
     content:
       "Please visit the Revised Submission Instructions and Final Camera-Ready Submission Instructions webpages for detailed step-by-step guidance. If you have questions, kindly review all information provided on these instruction pages as well as the FAQs below before contacting the Secretariat.",
   },
@@ -25,12 +18,10 @@ const questions = [
   },
   {
     title: "I need to register more than one paper. How can I do that?",
-    content:
-      "Additional manuscripts may be submitted using the same account by selecting the New Submission option in the menu.",
+    content: "Additional manuscripts may be submitted using the same account by selecting the New Submission option in the menu.",
   },
   {
-    title:
-      "Do I need to pay the registration fee before I can upload my final manuscript?",
+    title: "Do I need to pay the registration fee before I can upload my final manuscript?",
     content:
       "No. However, please note that your paper will not proceed further in the review process nor continue to publisher processing until registration payment has been completed.",
   },
@@ -41,36 +32,26 @@ const questions = [
       "You must include complete and accurate author details (full names, affiliations, and emails) in the Final Camera-Ready version. Manuscripts missing proper author information will be considered incomplete.",
   },
   {
-    title:
-      "I received a rejection notice for my paper without any review. What could be the reason?",
+    title: "I received a rejection notice for my paper without any review. What could be the reason?",
     content:
       "The paper does not match the scope/topic of the conference, there are critical errors in the writing, it is a duplicate submission, or a paper that has already been published elsewhere.",
   },
 ]
 ---
 
-<section class="flex w-full justify-center overflow-hidden bg-red-50 px-4">
+<section class="flex w-full justify-center overflow-hidden bg-red-50 px-4 xl:rounded-br-4xl xl:rounded-bl-4xl">
   <div class="flex w-full max-w-6xl flex-1 flex-col py-26 2xl:max-w-7xl">
     <SectionTitleAlt title="Paper Upload FAQs" subtitle="FAQ" />
 
-    <div
-      class="relative grid grid-cols-1 gap-4 md:grid-cols-[.55fr_1fr] md:gap-10 lg:gap-20"
-    >
+    <div class="relative grid grid-cols-1 gap-4 md:grid-cols-[.55fr_1fr] md:gap-10 lg:gap-20">
       <div class="h-full w-full"></div>
 
       <ItemGroup className="gap-2">
         {
           questions.map((faq) => (
-            <Item
-              variant="outline"
-              className="items-start bg-card shadow-[inset_0_0_10px_rgba(0,0,0,.1)] hover:-translate-y-1 transition-transform"
-            >
+            <Item variant="outline" className="items-start bg-card shadow-[inset_0_0_10px_rgba(0,0,0,.1)] hover:-translate-y-1 transition-transform">
               <ItemMedia variant="icon">
-                <HugeiconsIcon
-                  icon={BubbleChatQuestionIcon}
-                  size={16}
-                  color="currentColor"
-                />
+                <HugeiconsIcon icon={BubbleChatQuestionIcon} size={16} color="currentColor" />
               </ItemMedia>
 
               <ItemContent>

@@ -8,18 +8,10 @@ import DesktopNavigation from "./desktop-navigation"
 import MobileNavigation from "./mobile-navigation"
 ---
 
-<div
-  class="fixed top-0 left-0 z-1000 flex w-full justify-center bg-white shadow-md"
->
-  <div
-    class="flex w-full items-center justify-between gap-4 p-1 px-4 lg:p-0 lg:px-10"
-  >
+<div class="fixed top-0 left-0 z-1000 flex w-full justify-center bg-white shadow-md">
+  <div class="flex w-full items-center justify-between gap-4 p-1 px-4 lg:p-2 lg:px-10">
     <a href="/">
-      <img
-        src="/assets/images/conference-logo-red.png"
-        alt="logo"
-        class="h-8 md:h-10"
-      />
+      <img src="/assets/images/conference-logo-red.png" alt="logo" class="h-8 md:h-10" />
     </a>
 
     <div class="hidden lg:block">
@@ -29,16 +21,8 @@ import MobileNavigation from "./mobile-navigation"
       <MobileNavigation client:load />
     </div>
 
-    <a
-      href="https://igers.org/"
-      target="_blank"
-      class={cn(buttonVariants({ variant: "default" }), "hidden lg:flex")}
-    >
-      Register now <HugeiconsIcon
-        icon={UserAdd02Icon}
-        size={16}
-        color="currentColor"
-      />
+    <a href="https://igers.org/" target="_blank" class={cn(buttonVariants({ variant: "default" }), "hidden lg:flex")}>
+      Register now <HugeiconsIcon icon={UserAdd02Icon} size={16} color="currentColor" />
     </a>
   </div>
 </div>

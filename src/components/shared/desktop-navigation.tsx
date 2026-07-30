@@ -17,26 +17,22 @@ const authorInformationMenuContent = [
   {
     title: "Revised Submission Instructions",
     href: "/author-informations/revised-submission-instructions",
-    description:
-      "Find out more about how you can submit your manuscript after your initial submission",
+    description: "Find out more about how you can submit your manuscript after your initial submission",
   },
   {
     title: "Final-Camera Ready Instructions",
     href: "/author-informations/final-camera-ready-instructions",
-    description:
-      "Find out more about how you can submit your manuscript after your initial submission",
+    description: "Find out more about how you can submit your manuscript after your initial submission",
   },
   {
     title: "Presentation Instructions",
     href: "/author-informations/presentation-instructions",
-    description:
-      "Find out more about the presentation process and any common issues you may encounter",
+    description: "Find out more about the presentation process and any common issues you may encounter",
   },
   {
     title: "Paper Upload FAQs",
     href: "/author-informations/paper-upload-faqs",
-    description:
-      "Find out more about the paper upload process and any common issues you may encounter",
+    description: "Find out more about the paper upload process and any common issues you may encounter",
   },
 ]
 
@@ -53,7 +49,7 @@ export default function DesktopNavigation() {
         <NavigationMenuItem>
           <NavigationMenuTrigger>Author Information</NavigationMenuTrigger>
           <NavigationMenuContent>
-            <ul className="w-96">
+            <ul className="w-120">
               {authorInformationMenuContent.map((item) => (
                 <ListItem key={item.title} href={item.href} title={item.title}>
                   {item.description}
@@ -64,9 +60,31 @@ export default function DesktopNavigation() {
         </NavigationMenuItem>
 
         <NavigationMenuItem>
-          <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-            <a href="/venue">Venue</a>
-          </NavigationMenuLink>
+          <NavigationMenuTrigger>Travel</NavigationMenuTrigger>
+          <NavigationMenuContent>
+            <ul className="w-120">
+              <ListItem href="/venue" title="Venue & Accomodations">
+                Explore event location details and find recommended places to stay during your trip.
+              </ListItem>
+              <ListItem href="/visa" title="Visa">
+                Review travel requirements and find guidelines for submitting your application.
+              </ListItem>
+            </ul>
+          </NavigationMenuContent>
+        </NavigationMenuItem>
+
+        <NavigationMenuItem>
+          <NavigationMenuTrigger>Program</NavigationMenuTrigger>
+          <NavigationMenuContent>
+            <ul className="w-120">
+              <ListItem href="/speakers" title="Speakers">
+                Discover the keynote speakers, industry experts, and panelists presenting at the event.
+              </ListItem>
+              <ListItem href="/program-overview" title="Program at a Glance">
+                Get a quick overview of the event schedule, session topics, and daily activities.
+              </ListItem>
+            </ul>
+          </NavigationMenuContent>
         </NavigationMenuItem>
 
         <NavigationMenuItem>
@@ -97,12 +115,7 @@ export default function DesktopNavigation() {
   )
 }
 
-function ListItem({
-  title,
-  children,
-  href,
-  ...props
-}: React.ComponentPropsWithoutRef<"li"> & { href: string }) {
+function ListItem({ title, children, href, ...props }: React.ComponentPropsWithoutRef<"li"> & { href: string }) {
   return (
     <li {...props}>
       <NavigationMenuLink asChild>
