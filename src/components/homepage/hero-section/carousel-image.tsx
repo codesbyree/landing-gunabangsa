@@ -1,8 +1,4 @@
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-} from "@/components/ui/carousel"
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel"
 import Autoplay from "embla-carousel-autoplay"
 import Fade from "embla-carousel-fade"
 
@@ -15,18 +11,11 @@ const carouselImageUrls = [
 
 export default function CarouselImage() {
   return (
-    <Carousel
-      className="absolute top-0 left-0 h-dvh w-full"
-      plugins={[Autoplay({ delay: 5000 }), Fade()]}
-    >
-      <CarouselContent className="bg-blue-600">
+    <Carousel className="absolute top-0 left-0 h-dvh w-full" plugins={[Autoplay({ delay: 5000 }), Fade()]}>
+      <CarouselContent>
         {carouselImageUrls.map((url, index) => (
-          <CarouselItem key={index} className="h-full w-full bg-blue-200">
-            <img
-              src={url}
-              alt={`Slide ${index + 1}`}
-              className="h-dvh w-full object-cover"
-            />
+          <CarouselItem key={index} className="h-full w-full">
+            <img src={url} alt={`Slide ${index + 1}`} className="h-dvh w-full object-cover brightness-130" />
           </CarouselItem>
         ))}
       </CarouselContent>

@@ -1,0 +1,37 @@
+---
+import SectionTitleAlt from "@/components/shared/section-title-alt.astro"
+
+import SpeakerCard from "./speaker-card.astro"
+---
+
+<section class="flex w-full justify-center overflow-hidden bg-white px-4 xl:rounded-br-4xl xl:rounded-bl-4xl">
+  <div class="flex w-full max-w-6xl flex-1 flex-col py-16 lg:py-26 2xl:max-w-7xl">
+    <SectionTitleAlt title="Invited Speakers" subtitle="SPEAKERS" />
+
+    <div class="grid grid-cols-1 md:grid-cols-[.55fr_1fr] md:gap-10 lg:mb-16 lg:gap-20">
+      <div class="col-start-2 flex flex-col gap-4 text-slate-600">
+        <SpeakerCard
+          name="Dr. Ikrimah Nafilata, S.K.M., M.Kes (Epid)"
+          affiliation="STIKES Guna Bangsa Yogyakarta, Indonesia"
+          image="/assets/images/speakers/ikrimah-nafilata.jpeg"
+        >
+          <p>
+            Dr. Ikrimah Nafilata is an expert in epidemiology and public health at STIKES Guna Bangsa Yogyakarta, with extensive experience in health
+            management and epidemiological research.
+          </p>
+        </SpeakerCard>
+
+        <SpeakerCard
+          name="Anita Nur Mayani, S.Tr.Rad., M.T."
+          affiliation="STIKES Guna Bangsa Yogyakarta, Indonesia"
+          image="/assets/images/speakers/anita-nur-mayani.jpg"
+        >
+          <p>
+            Anita Nur Mayani specializes in radiological technology and medical imaging at STIKES Guna Bangsa Yogyakarta, with significant
+            contributions to diagnostic imaging research.
+          </p>
+        </SpeakerCard>
+      </div>
+    </div>
+  </div>
+</section>

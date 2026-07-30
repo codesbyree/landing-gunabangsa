@@ -1,0 +1,37 @@
+---
+import SectionTitleAlt from "@/components/shared/section-title-alt.astro"
+
+import SpeakerCard from "./speaker-card.astro"
+---
+
+<section class="flex w-full justify-center overflow-hidden bg-red-50 px-4">
+  <div class="flex w-full max-w-6xl flex-1 flex-col py-16 lg:py-26 2xl:max-w-7xl">
+    <SectionTitleAlt title="Keynote Speakers" subtitle="SPEAKERS" />
+
+    <div class="grid grid-cols-1 md:grid-cols-[.55fr_1fr] md:gap-10 lg:mb-16 lg:gap-20">
+      <div class="col-start-2 flex flex-col gap-4 text-slate-600">
+        <SpeakerCard
+          name="Dr. Fitri Nadifah, S.Si., M.Sc."
+          affiliation="STIKES Guna Bangsa Yogyakarta, Indonesia"
+          image="/assets/images/speakers/fitri-nadifah.jpg"
+        >
+          <p>
+            Dr. Fitri Nadifah is a distinguished researcher and academic at STIKES Guna Bangsa Yogyakarta, contributing to advancements in biomedical
+            and health sciences.
+          </p>
+        </SpeakerCard>
+
+        <SpeakerCard
+          name="Achmad Rizal Purnama (To be confirmed)"
+          affiliation="Ambasador of Indonesia to Turkiye"
+          image="/assets/images/speakers/achmad.webp"
+        >
+          <p>
+            Achmad Rizal Purnama is an Indonesian diplomat currently serving as the Ambassador of Indonesia to Turkey. Prior to his ambassadorship, he
+            served as the director for Middle East and chief of staff to the foreign minister.
+          </p>
+        </SpeakerCard>
+      </div>
+    </div>
+  </div>
+</section>

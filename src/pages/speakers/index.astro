@@ -1,0 +1,16 @@
+---
+import Layout from "@/layouts/main.astro"
+import Breadcrumbs from "@/components/shared/breadcrumbs.astro"
+import WelcomeSection from "@/components/speakers-page/welcome-section.astro"
+import KeynoteSection from "@/components/speakers-page/keynote-section.astro"
+import InvitedSection from "@/components/speakers-page/invited-section.astro"
+---
+
+<Layout>
+  <Breadcrumbs pageName="Speakers" coverImageUrl="/assets/images/hero-carousel/slide - 6.webp" />
+  <main>
+    <WelcomeSection />
+    <KeynoteSection />
+    <InvitedSection />
+  </main>
+</Layout>

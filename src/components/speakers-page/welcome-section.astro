@@ -1,0 +1,23 @@
+---
+import SectionTitleAlt from "@/components/shared/section-title-alt.astro"
+
+import SpeakerCard from "./speaker-card.astro"
+---
+
+<section class="flex w-full justify-center overflow-hidden bg-white px-4">
+  <div class="flex w-full max-w-6xl flex-1 flex-col py-16 lg:py-26 2xl:max-w-7xl">
+    <SectionTitleAlt title="Welcome Speech" subtitle="SPEAKERS" />
+
+    <div class="grid grid-cols-1 md:grid-cols-[.55fr_1fr] md:gap-10 lg:mb-16 lg:gap-20">
+      <div class="col-start-2 flex flex-col gap-8 text-slate-600">
+        <SpeakerCard name="John Doe" affiliation="Company" image="/assets/images/speakers/placeholder.jpg">
+          <p>
+            Nam vehicula cursus purus non ultricies. Vestibulum faucibus dapibus erat, a finibus sem. Praesent lobortis ipsum facilisis magna ultrices
+            accumsan. Cras ultrices egestas nulla, nec consequat neque laoreet nec. In hac habitasse platea dictumst. Morbi consectetur vel ex sit
+            amet blandit. Aenean at efficitur mauris, hendrerit convallis orci.
+          </p>
+        </SpeakerCard>
+      </div>
+    </div>
+  </div>
+</section>

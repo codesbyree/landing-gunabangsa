@@ -3,13 +3,7 @@ import { HugeiconsIcon } from "@hugeicons/react"
 import { BubbleChatQuestionIcon } from "@hugeicons/core-free-icons"
 
 import SectionTitleAlt from "@/components/shared/section-title-alt.astro"
-import {
-  Item,
-  ItemTitle,
-  ItemContent,
-  ItemMedia,
-  ItemGroup,
-} from "@/components/ui/item"
+import { Item, ItemTitle, ItemContent, ItemMedia, ItemGroup } from "@/components/ui/item"
 
 const questions = [
   {
@@ -29,8 +23,7 @@ const questions = [
   },
   {
     title: "How do I get to the conference?",
-    content:
-      "Details on how to travel to the conference are available on the Venue page.",
+    content: "Details on how to travel to the conference are available on the Venue page.",
   },
   {
     title: "When is the early registration deadline?",
@@ -48,12 +41,10 @@ const questions = [
   },
   {
     title: "Can I get a receipt for my payment to attend the conference?",
-    content:
-      "Receipts will be issued electronically via email and this will be the only form of receipt.",
+    content: "Receipts will be issued electronically via email and this will be the only form of receipt.",
   },
   {
-    title:
-      "How can I receive an invitation letter to the conference for my VISA application?",
+    title: "How can I receive an invitation letter to the conference for my VISA application?",
     content:
       "We only provide information confirming that you are listed as an attendee of the conference. We cannot guarantee that it can be used for a VISA application.",
   },
@@ -61,27 +52,18 @@ const questions = [
 ---
 
 <section class="flex w-full justify-center overflow-hidden bg-red-50 px-4">
-  <div class="flex w-full max-w-6xl flex-1 flex-col py-26 2xl:max-w-7xl">
+  <div class="flex w-full max-w-6xl flex-1 flex-col py-16 lg:py-26 2xl:max-w-7xl">
     <SectionTitleAlt title="Frequently Asked Questions" subtitle="FAQ" />
 
-    <div
-      class="relative grid grid-cols-1 gap-4 md:grid-cols-[.55fr_1fr] md:gap-10 lg:gap-20"
-    >
+    <div class="relative grid grid-cols-1 gap-4 md:grid-cols-[.55fr_1fr] md:gap-10 lg:gap-20">
       <div class="h-full w-full"></div>
 
       <ItemGroup className="gap-2">
         {
           questions.map((faq) => (
-            <Item
-              variant="outline"
-              className="items-start bg-card shadow-[inset_0_0_10px_rgba(0,0,0,.1)] hover:-translate-y-1 transition-transform"
-            >
+            <Item variant="outline" className="items-start bg-card shadow-[inset_0_0_10px_rgba(0,0,0,.1)] hover:-translate-y-1 transition-transform">
               <ItemMedia variant="icon">
-                <HugeiconsIcon
-                  icon={BubbleChatQuestionIcon}
-                  size={16}
-                  color="currentColor"
-                />
+                <HugeiconsIcon icon={BubbleChatQuestionIcon} size={16} color="currentColor" />
               </ItemMedia>
 
               <ItemContent>
