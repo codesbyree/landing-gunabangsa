@@ -1,0 +1,37 @@
+---
+import SectionTitle from "@/components/shared/section-title.astro"
+import { Separator } from "../ui/separator"
+---
+
+<section class="flex w-full justify-center bg-red-50 px-4">
+  <div class="flex w-full max-w-6xl flex-1 flex-col py-16 lg:py-26 2xl:max-w-7xl">
+    <SectionTitle
+      title="How to log in into your account"
+      subtitle="LOGIN"
+      description="You are required to have an IGERS account to submit your manuscript."
+    />
+
+    <div class="grid w-full grid-cols-1 items-start gap-4 md:grid-cols-2 md:gap-10 lg:mb-16">
+      <div class="col-start-2 flex flex-col gap-8">
+        <article class="flex flex-col gap-4">
+          <h2 class="font-semibold text-red-900">1. Open IGERS</h2>
+          <p class="text-gray-600">
+            Navigate to <a href="https://igers.org/login">igers.org/login</a>
+          </p>
+        </article>
+        <Separator />
+
+        <article class="flex flex-col gap-4">
+          <h2 class="font-semibold text-red-900">2. Fill out the form</h2>
+          <p class="text-gray-600">Fill out the required informations</p>
+          <img src="/assets/images/tutorial/login.webp" alt="" class="w-full" />
+        </article>
+        <Separator />
+
+        <article class="flex flex-col gap-4">
+          <h2 class="font-semibold text-red-900">3. Click the "Log in" button</h2>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>

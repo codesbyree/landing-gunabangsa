@@ -1,35 +1,47 @@
 ---
-import { AspectRatio } from "../ui/aspect-ratio"
 import SectionTitle from "@/components/shared/section-title.astro"
+import { Separator } from "../ui/separator"
 ---
 
 <section class="flex w-full justify-center bg-white px-4">
   <div class="flex w-full max-w-6xl flex-1 flex-col py-16 lg:py-26 2xl:max-w-7xl">
     <SectionTitle
       title="Create an IGERS Account"
-      subtitle="ACCOUNT"
+      subtitle="REGISTER"
       description="You are required to create an IGERS account to submit your manuscript."
     />
 
-    <div class="grid w-full grid-cols-1 gap-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
-      {
-        [
-          `Go to igers.org/register. Or click "Register Now" button on the top-right corner of this website.`,
-          "In the register page, fill out all the required fields, then click Continue.",
-          "After creating an account, you will be prompted to verify your email.",
-          `Check your inbox for the verification email. If it's missing or expired, follow the "My verification link is expired, what should I do?" tutorial to request a new one.`,
-          "After verifying your email address, you will be automatically redirected to your dashboard.",
-        ].map((step, index) => (
-          <AspectRatio ratio={3 / 4}>
-            <div class="h-full w-full overflow-hidden rounded-2xl shadow-sm shadow-red-950/50 transition-all hover:-translate-y-1 hover:opacity-90">
-              <div class="relative flex h-full w-full flex-col justify-end gap-2 rounded-2xl border border-red-950 bg-red-900 p-6 shadow-[inset_0_0_10px_rgba(0,0,0,1)]">
-                <p class="absolute top-6 left-6 text-7xl font-black text-white/30">{index + 1}</p>
-                <p class="font-medium text-white">{step}</p>
-              </div>
-            </div>
-          </AspectRatio>
-        ))
-      }
+    <div class="grid w-full grid-cols-1 items-start gap-4 md:grid-cols-2 md:gap-10 lg:mb-16">
+      <div class="flex flex-col gap-8 md:col-start-2">
+        <article class="flex flex-col gap-4">
+          <h2 class="font-semibold text-red-900">1. Open IGERS</h2>
+          <p class="text-gray-600">
+            Go to <a href="https://igers.org/register" class="text-blue-600" target="_blank">igers.org/register.</a> Or click "Register Now" button on the
+            top-right corner of this website.
+          </p>
+        </article>
+        <Separator />
+
+        <article class="flex flex-col gap-4">
+          <h2 class="font-semibold text-red-900">2. Fill out the form</h2>
+          <p class="text-gray-600">Fill out the required informations, then click continue.</p>
+          <img src="/assets/images/tutorial/register.webp" alt="" class="w-full" />
+        </article>
+        <Separator />
+
+        <article class="flex flex-col gap-4">
+          <h2 class="font-semibold text-red-900">3. Verify your email</h2>
+          <p class="text-gray-600">
+            Check your inbox for the verification email. If it's missing or expired, follow the "My verification link is expired, what should I do?"
+            tutorial to request a new one.
+          </p>
+        </article>
+        <Separator />
+
+        <article class="flex flex-col gap-4">
+          <h2 class="font-semibold text-red-900">4. You successfully created your account.</h2>
+        </article>
+      </div>
     </div>
   </div>
 </section>

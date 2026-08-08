@@ -1,9 +1,9 @@
 ---
 import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
-import CarouselImage from "./carousel-image.tsx"
 import { HugeiconsIcon } from "@hugeicons/react"
-import { Download01Icon, SentIcon } from "@hugeicons/core-free-icons"
+import { SentIcon } from "@hugeicons/core-free-icons"
+import CarouselImage from "./carousel-image.tsx"
 ---
 
 <section class="relative flex min-h-dvh w-full justify-center overflow-hidden bg-zinc-950 px-4">
@@ -29,11 +29,6 @@ import { Download01Icon, SentIcon } from "@hugeicons/core-free-icons"
           <a href="author-informations/initial-submission-instructions" class={cn(buttonVariants({ variant: "default", size: "lg" }))}
             >Submit a manuscript
             <HugeiconsIcon icon={SentIcon} size={16} color="currentColor" />
-          </a>
-
-          <a href="" class={cn(buttonVariants({ variant: "secondary", size: "lg" }))}
-            >Download guidelines
-            <HugeiconsIcon icon={Download01Icon} size={16} color="currentColor" />
           </a>
         </div>
 

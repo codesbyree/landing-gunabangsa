@@ -45,6 +45,25 @@ const invitedSpeakers: SpeakerTypes[] = [
     type: "invited" as const,
     image: "/assets/images/speakers/anita-nur-mayani.jpg",
   },
+  {
+    name: "Associate Professor Ts. Dr. Wan Ismahanisa",
+    affiliation: "Universiti Teknologi MARA (UiTM), Malaysia",
+    academic_background:
+      "Assoc. Prof. Ts. Dr. Wan Ismahanisa Ismail is an Associate Professor at Universiti Teknologi MARA specializing in public health and health sciences, recognized globally for her academic leadership, research contributions, and extensive international collaborations.",
+    topic: "-",
+    session: "-",
+    type: "invited" as const,
+    image: "/assets/images/speakers/wan.webp",
+  },
+  {
+    name: "Siriyaphon Jensariga",
+    affiliation: "Boromarajonani College of Nursing NSPRNW, Thailand",
+    academic_background: "",
+    topic: "-",
+    session: "-",
+    type: "invited" as const,
+    image: "/assets/images/speakers/sriyaphon.webp",
+  },
 ]
 
 export default function SpeakerCardRenderer() {

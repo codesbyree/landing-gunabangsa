@@ -2,17 +2,16 @@
 import Layout from "@/layouts/main.astro"
 import Breadcrumbs from "@/components/shared/breadcrumbs.astro"
 import JoinAsAuthorSection from "@/components/initial-submission-page/join-as-author-section.astro"
+import LoginSection from "@/components/initial-submission-page/login-section.astro"
 import CreateAccountSection from "@/components/initial-submission-page/create-account-section.astro"
 import PrepareArticleSubmissionSection from "@/components/initial-submission-page/prepare-article-submission.astro"
 ---
 
 <Layout>
-  <Breadcrumbs
-    pageName="Initial Submission Instructions"
-    coverImageUrl="/assets/images/hero-carousel/slide - 8.webp"
-  />
+  <Breadcrumbs pageName="Initial Submission Instructions" coverImageUrl="/assets/images/hero-carousel/slide - 8.webp" />
   <main>
     <CreateAccountSection />
+    <LoginSection />
     <JoinAsAuthorSection />
     <PrepareArticleSubmissionSection />
   </main>
