@@ -64,6 +64,16 @@ const invitedSpeakers: SpeakerTypes[] = [
     type: "invited" as const,
     image: "/assets/images/speakers/sriyaphon.webp",
   },
+  {
+    name: "Dr. Mohd Nazmi Che Nordin",
+    affiliation: "Department of Radiography and Medical Imaging at Fatima College of Health Sciences, Al Ain Campus, Abu Dhabi, United Arab Emirates",
+    academic_background:
+      "Dr. Mohd Nazmi Che Nordin is an Assistant Professor of Radiography at Fatima College, UAE, holding a PhD and specializing in advanced medical imaging.",
+    topic: "-",
+    session: "-",
+    type: "invited" as const,
+    image: "/assets/images/speakers/nazmi.webp",
+  },
 ]
 
 export default function SpeakerCardRenderer() {
