@@ -7,18 +7,18 @@ import ResearchTracks from "@/components/homepage/research-tracks-section/index.
 import PublicationOpportunitySection from "@/components/homepage/publication-opportunity-section.astro"
 import SpeakersSection from "@/components/homepage/speakers-section/index.astro"
 import TimelineSection from "@/components/homepage/timeline-section/index.astro"
-import RunningText from "@/components/shared/running-text.tsx"
+import RunningText from "@/components/shared/running-text.astro"
 import SponsorsSection from "@/components/homepage/sponsors-section.astro"
 ---
 
 <Layout>
-  <main>
+  <main data-app-main>
     <HeroSection />
     <WelcomeSection />
     <Separator />
     <PublicationOpportunitySection />
     <Separator />
-    <RunningText client:load />
+    <RunningText />
     <ResearchTracks />
     <Separator />
     <SpeakersSection />
@@ -27,3 +27,19 @@ import SponsorsSection from "@/components/homepage/sponsors-section.astro"
     <SponsorsSection />
   </main>
 </Layout>
+
+<script>
+  import { gsap } from "@/lib/gsap"
+
+  function initAnimation() {
+    const header = document.querySelector("[data-app-navigation]")
+
+    gsap.from(header, {
+      delay: 1,
+      yPercent: -100,
+      ease: "power3.out",
+    })
+  }
+
+  initAnimation()
+</script>

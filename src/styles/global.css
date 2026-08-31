@@ -132,35 +132,3 @@
     @apply font-sans;
   }
 }
-
-@keyframes marquee {
-  0% {
-    transform: translate3d(0, 0, 0);
-  }
-  100% {
-    transform: translate3d(-50%, 0, 0);
-  }
-}
-
-@keyframes marquee-reverse {
-  0% {
-    transform: translate3d(-50%, 0, 0);
-  }
-  100% {
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-.animate-marquee {
-  display: inline-flex;
-  animation: marquee 40s linear infinite;
-  backface-visibility: hidden;
-  perspective: 1000px;
-}
-
-.animate-marquee-reverse {
-  display: inline-flex;
-  animation: marquee-reverse 40s linear infinite;
-  backface-visibility: hidden;
-  perspective: 1000px;
-}

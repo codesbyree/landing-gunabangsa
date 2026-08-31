@@ -20,9 +20,16 @@ import Footer from "@/components/shared/footer.astro"
   </head>
   <body>
     <Navigation />
-    <div class="relative z-2">
-      <slot />
-    </div>
+    <slot />
     <Footer />
+
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        overscroll-behavior: none;
+      }
+    </style>
   </body>
 </html>

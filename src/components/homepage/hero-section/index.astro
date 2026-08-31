@@ -3,36 +3,44 @@ import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
 import { HugeiconsIcon } from "@hugeicons/react"
 import { SentIcon } from "@hugeicons/core-free-icons"
-import CarouselImage from "./carousel-image.tsx"
+
+import Slideshow from "@/components/ui/slideshow.astro"
+
+import slide1Image from "@/assets/images/hero-carousel/slide - 1.webp"
+import slide2Image from "@/assets/images/hero-carousel/slide - 2.webp"
+import slide3Image from "@/assets/images/hero-carousel/slide - 3.webp"
+import slide4Image from "@/assets/images/hero-carousel/slide - 4.webp"
 ---
 
-<section class="relative flex min-h-dvh w-full justify-center overflow-hidden bg-zinc-950 px-4">
+<section data-app-hero class="relative flex min-h-dvh w-full justify-center overflow-hidden bg-zinc-950 px-4">
   <div class="absolute inset-0 z-20 bg-linear-to-tr from-orange-950 via-orange-950/30 to-transparent"></div>
 
-  <CarouselImage client:load />
+  <div data-app-carousel class="absolute top-0 left-0 h-dvh w-dvw will-change-transform">
+    <Slideshow data={[slide1Image, slide2Image, slide3Image, slide4Image]} />
+  </div>
 
   <div class="relative z-50 flex w-full flex-1 items-end justify-center p-0 pb-8 md:p-6 xl:p-10 xl:pb-12">
     <div class="flex w-full flex-col">
       <div class="mb-10">
-        <h1 class="mb-4 w-full max-w-4xl text-xl font-semibold text-white sm:text-xl md:text-3xl lg:text-4xl 2xl:text-5xl">
+        <h1 data-split-title class="mb-4 w-full max-w-4xl text-xl font-semibold text-white sm:text-xl md:text-3xl lg:text-4xl 2xl:text-5xl">
           The 1st Healthcare Excellence and Advancements in Life Treatment & Human Medicine – International Conference (HEALTHMED-IC)
         </h1>
 
-        <p class="max-w-xl text-slate-200">
+        <p data-split-body class="max-w-xl text-slate-200">
           More than a conference, HEALTHMED-IC is your gateway to medical evolution—a curated exchange empowering practitioners and innovators to
           advance global healthcare and life sciences.
         </p>
       </div>
 
       <div class="flex flex-col justify-between gap-10 xl:flex-row xl:items-center">
-        <div class="flex flex-col gap-2 md:flex-row">
+        <div data-animate-up class="flex flex-col gap-2 md:flex-row">
           <a href="author-informations/initial-submission-instructions" class={cn(buttonVariants({ variant: "default", size: "lg" }))}
             >Submit a manuscript
             <HugeiconsIcon icon={SentIcon} size={16} color="currentColor" />
           </a>
         </div>
 
-        <div class="flex w-max flex-col gap-6 rounded-sm md:flex-row xl:bg-white/30 xl:p-1 xl:px-2 xl:backdrop-blur-sm">
+        <div data-animate-up class="flex w-max flex-col gap-6 rounded-sm md:flex-row xl:bg-white/30 xl:p-1 xl:px-2 xl:backdrop-blur-sm">
           <div>
             <span class="text-xs text-slate-300">VENUE</span>
             <p class="text-sm font-medium text-slate-50">İstanbul Gelişim Üniversitesi Tower</p>
@@ -49,3 +57,95 @@ import CarouselImage from "./carousel-image.tsx"
     </div>
   </div>
 </section>
+
+<script>
+  import { gsap, SplitText } from "@/lib/gsap"
+
+  function initAnimation() {
+    const container = document.querySelector("[data-app-hero]")
+    if (!container) return
+
+    const ctx = gsap.context(() => {
+      const mm = gsap.matchMedia()
+
+      mm.add("(min-width: 1280px)", () => {
+        const titleEl = container.querySelector("[data-split-title]")
+        const bodyEl = container.querySelector("[data-split-body]")
+        const carousel = container.querySelector("[data-app-carousel]")
+
+        const splitTitle = new SplitText(titleEl, {
+          type: "lines,words",
+          linesClass: "overflow-hidden",
+        })
+
+        const splitBody = new SplitText(bodyEl, {
+          type: "lines",
+          linesClass: "overflow-hidden",
+        })
+
+        const tl = gsap.timeline({
+          delay: 0.5,
+          scrollTrigger: {
+            trigger: container,
+            start: "top 80%",
+            toggleActions: "play none none none",
+          },
+          defaults: {
+            duration: 0.5,
+            ease: "power3.out",
+          },
+        })
+
+        tl.from(splitTitle.words, {
+          yPercent: 100,
+          opacity: 0,
+          stagger: 0.06,
+          filter: "blur(10px)",
+        })
+          .from(
+            splitBody.lines,
+            {
+              yPercent: 100,
+              opacity: 0,
+              stagger: 0.06,
+              filter: "blur(10px)",
+            },
+            "-=0.6"
+          )
+          .from("[data-animate-up]", { y: 30, opacity: 0, filter: "blur(10px)", stagger: 0.2 }, 0.8)
+
+        gsap.fromTo(
+          carousel,
+          {
+            y: 0,
+          },
+          {
+            y: 500,
+            ease: "none",
+            scrollTrigger: {
+              start: 0,
+              end: 1000,
+              scrub: true,
+            },
+          }
+        )
+
+        const handleResize = () => {
+          splitTitle.revert()
+          splitBody.revert()
+          ScrollTrigger.refresh()
+        }
+
+        window.addEventListener("resize", handleResize)
+
+        return () => {
+          window.removeEventListener("resize", handleResize)
+        }
+      })
+    }, container)
+
+    return ctx
+  }
+
+  initAnimation()
+</script>

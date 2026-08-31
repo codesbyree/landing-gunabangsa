@@ -2,95 +2,65 @@
 import SectionTitleAlt from "@/components/shared/section-title-alt.astro"
 import { MessageMultipleIcon, PresentationPodiumFreeIcons, SpeechIcon, UserSwitchIcon } from "@hugeicons/core-free-icons"
 import { HugeiconsIcon } from "@hugeicons/react"
-import { AspectRatio } from "../ui/aspect-ratio"
 ---
 
-<section class="flex w-full justify-center overflow-hidden bg-red-50 px-4">
+<section data-app-welcome class="flex w-full justify-center overflow-hidden bg-red-50 px-4">
   <div class="relative flex w-full max-w-6xl flex-1 flex-col py-16 lg:py-26 2xl:max-w-7xl">
     <SectionTitleAlt title="Welcome to The 1st HEALTHMED-IC" subtitle="INVITATION" />
 
     <div class="relative grid grid-cols-1 gap-4 md:grid-cols-[.55fr_1fr] md:gap-10 lg:gap-20">
-      <!-- <div class="flex h-full w-full flex-col justify-end">
-        <div
-          class="absolute top-1/2 -left-80 z-5 hidden h-full w-full max-w-3xl -translate-y-1/2 transition-opacity hover:opacity-0 md:block"
-        >
-          <AspectRatio ratio={1 / 1}>
-            <img src="/assets/images/venue-ilustration.jpg" alt="" />
-          </AspectRatio>
-        </div>
-
-        <div
-          class="absolute top-1/2 -left-80 z-1 hidden h-full w-full max-w-3xl -translate-y-1/2 md:block"
-        >
-          <AspectRatio ratio={1 / 1}>
-            <img src="/assets/images/venue-ilustration-real.webp" alt="" />
-          </AspectRatio>
-        </div>
-
-        <div class="relative z-30 hidden items-center gap-4 lg:flex">
-          <div class="h-3 w-3 animate-ping rounded-full bg-red-600"></div>
-          <div
-            class="rounded-lg border border-border bg-slate-50/90 p-2 text-xs text-slate-600"
-          >
-            <span>Venue</span>
-            <p class="font-medium text-red-700">
-              İstanbul Gelişim Üniversitesi Tower
-            </p>
-          </div>
-        </div>
-      </div> -->
       <div></div>
 
       <div class="relative z-10 flex flex-col gap-4 bg-red-50/80 text-slate-600 md:text-justify">
-        <p>
+        <p data-animate-up>
           It is with great honor and sincere pleasure that we invite you to attend The 1st HEALTHMED-IC (Healthcare Excellence and Advancements in
           Life Treatment & Human Medicine – International Conference).
         </p>
-        <p>
+        <p data-animate-up>
           This prestigious international conference is designed as a scientific forum that brings together academics, clinicians, researchers,
           practitioners, policymakers, and students to share knowledge, research findings, and innovative ideas in the field of healthcare and human
           medicine.
         </p>
-        <p>
+        <p data-animate-up>
           In this rapidly evolving era, healthcare faces complex global challenges — from emerging diseases and technological disruption to
           personalized medicine and sustainable health systems. Through The 1st HEALTHMED-IC, we aim to foster interdisciplinary collaboration,
           promote cutting-edge research, and encourage meaningful discussions that contribute to healthcare excellence and advancements in life
           treatment.
         </p>
 
-        <p>This conference will feature:</p>
+        <p data-animate-up>This conference will feature:</p>
 
-        <div class="grid grid-cols-1 gap-2 text-left md:grid-cols-2">
+        <div data-animate-up class="grid grid-cols-1 gap-2 text-left md:grid-cols-2">
           <div class="flex gap-3 rounded-md border border-red-300 bg-red-700 p-3 text-red-50 shadow-[inset_0_0_10px_rgba(0,0,0,0.1)]">
             <HugeiconsIcon icon={SpeechIcon} size={24} color="currentColor" className="shrink-0" />
 
             <p>Inspiring keynote speeches from internationally recognized experts</p>
           </div>
 
-          <div class="flex gap-3 rounded-md border border-red-300 bg-red-700 p-3 text-red-50 shadow-[inset_0_0_10px_rgba(0,0,0,0.1)]">
+          <div data-animate-up class="flex gap-3 rounded-md border border-red-300 bg-red-700 p-3 text-red-50 shadow-[inset_0_0_10px_rgba(0,0,0,0.1)]">
             <HugeiconsIcon icon={PresentationPodiumFreeIcons} size={24} color="currentColor" className="shrink-0" />
             <p>Oral and poster presentations</p>
           </div>
 
-          <div class="flex gap-3 rounded-md border border-red-300 bg-red-700 p-3 text-red-50 shadow-[inset_0_0_10px_rgba(0,0,0,0.1)]">
+          <div data-animate-up class="flex gap-3 rounded-md border border-red-300 bg-red-700 p-3 text-red-50 shadow-[inset_0_0_10px_rgba(0,0,0,0.1)]">
             <HugeiconsIcon icon={MessageMultipleIcon} size={24} color="currentColor" className="shrink-0" />
             <p>Panel discussions on current healthcare issues</p>
           </div>
 
-          <div class="flex gap-3 rounded-md border border-red-300 bg-red-700 p-3 text-red-50 shadow-[inset_0_0_10px_rgba(0,0,0,0.1)]">
+          <div data-animate-up class="flex gap-3 rounded-md border border-red-300 bg-red-700 p-3 text-red-50 shadow-[inset_0_0_10px_rgba(0,0,0,0.1)]">
             <HugeiconsIcon icon={UserSwitchIcon} size={24} color="currentColor" className="shrink-0" />
             <p>Networking opportunities for global collaboration</p>
           </div>
         </div>
 
-        <div class="rounded-lg border border-red-200 bg-red-100 p-2 px-4 shadow-[inset_0_0_10px_rgba(0,0,0,0.1)]">
+        <div data-animate-up class="rounded-lg border border-red-200 bg-red-100 p-2 px-4 shadow-[inset_0_0_10px_rgba(0,0,0,0.1)]">
           <span class="font-heading text-xs font-medium text-red-300 uppercase">Conference Theme</span>
           <p class="font-medium text-red-900">
             "Innovating Healthcare Excellence: Integrating Advanced Life Treatment and Human-Centered Medicine for a Sustainable Future"
           </p>
         </div>
 
-        <p>
+        <p data-animate-up>
           We warmly welcome researchers and professionals in the fields of medicine, nursing, public health, pharmacy, biomedical sciences, clinical
           research, health technology, and related disciplines to submit their best papers and join this remarkable academic gathering. Your presence
           and contribution will not only enrich the scientific discourse but also strengthen international partnerships toward improving global health
@@ -101,3 +71,76 @@ import { AspectRatio } from "../ui/aspect-ratio"
     </div>
   </div>
 </section>
+
+<script>
+  import { gsap, ScrollTrigger, SplitText } from "@/lib/gsap"
+
+  function initAnimation() {
+    const container = document.querySelector("[data-app-welcome]")
+    if (!container) return
+
+    const ctx = gsap.context(() => {
+      const mm = gsap.matchMedia()
+      mm.add("(min-width: 1280px)", () => {
+        const titleEl = container.querySelector("[data-split-title]")
+        const bodyEl = container.querySelector("[data-split-body]")
+
+        const splitTitle = new SplitText(titleEl, {
+          type: "lines,words",
+          linesClass: "overflow-hidden",
+        })
+
+        const splitBody = new SplitText(bodyEl, {
+          type: "lines",
+          linesClass: "overflow-hidden",
+        })
+
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: container,
+            start: "top 80%",
+            toggleActions: "play none none none",
+          },
+          defaults: {
+            duration: 0.5,
+            ease: "power3.out",
+          },
+        })
+
+        tl.from(splitTitle.words, {
+          yPercent: 100,
+          opacity: 0,
+          stagger: 0.06,
+          filter: "blur(10px)",
+        })
+          .from(
+            splitBody.lines,
+            {
+              yPercent: 100,
+              opacity: 0,
+              stagger: 0.06,
+              filter: "blur(10px)",
+            },
+            "-=0.6"
+          )
+          .from("[data-animate-up]", { y: 30, opacity: 0, filter: "blur(10px)", stagger: 0.2 }, 0.8)
+
+        const handleResize = () => {
+          splitTitle.revert()
+          splitBody.revert()
+          ScrollTrigger.refresh()
+        }
+
+        window.addEventListener("resize", handleResize)
+
+        return () => {
+          window.removeEventListener("resize", handleResize)
+        }
+      })
+    }, container)
+
+    return ctx
+  }
+
+  initAnimation()
+</script>

@@ -3,7 +3,7 @@ import SectionTitle from "@/components/shared/section-title.astro"
 import TimelineCardRenderer from "./timeline-card-renderer"
 ---
 
-<section class="relative flex w-full justify-center overflow-hidden bg-red-50 px-4">
+<section data-app-timeline class="relative flex w-full justify-center overflow-hidden bg-red-50 px-4">
   <div class="relative z-10 flex w-full max-w-6xl flex-1 flex-col py-16 lg:py-26 2xl:max-w-7xl">
     <SectionTitle
       title="Pioneers of the Health Frontier"
@@ -11,6 +11,95 @@ import TimelineCardRenderer from "./timeline-card-renderer"
       description="Navigate through a world-class lineup of sessions led by the architects of tomorrow's medicine and global healthcare policy."
     />
 
-    <TimelineCardRenderer client:load />
+    <div data-animate-up>
+      <TimelineCardRenderer client:load />
+    </div>
   </div>
 </section>
+
+<script>
+  import { gsap, ScrollTrigger, SplitText } from "@/lib/gsap"
+
+  function initAnimation() {
+    const container = document.querySelector("[data-app-timeline]")
+    if (!container) return
+
+    const ctx = gsap.context(() => {
+      const mm = gsap.matchMedia()
+
+      mm.add("(min-width: 1280px)", () => {
+        const titleEl = container.querySelector("[data-split-title]")
+        const bodyEls = container.querySelectorAll("[data-split-body]")
+
+        if (!titleEl) return
+
+        const splitTitle = new SplitText(titleEl, {
+          type: "lines,words",
+          linesClass: "overflow-hidden",
+        })
+
+        const splitBodyInstances: SplitText[] = []
+        const bodyLines: Element[] = []
+
+        bodyEls.forEach((body) => {
+          const split = new SplitText(body, {
+            type: "lines",
+            linesClass: "overflow-hidden",
+          })
+          splitBodyInstances.push(split)
+          bodyLines.push(...split.lines)
+        })
+
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: container,
+            start: "top 80%",
+            toggleActions: "play none none none",
+          },
+          defaults: {
+            duration: 0.5,
+            ease: "power3.out",
+          },
+        })
+
+        tl.from(splitTitle.words, {
+          yPercent: 100,
+          opacity: 0,
+          stagger: 0.06,
+          filter: "blur(10px)",
+        })
+          .from(
+            bodyLines,
+            {
+              yPercent: 100,
+              opacity: 0,
+              stagger: 0.06,
+              filter: "blur(10px)",
+            },
+            "-=0.6"
+          )
+          .from("[data-animate-up]", { y: 30, opacity: 0, filter: "blur(10px)", stagger: 0.2 }, 0.8)
+
+        let resizeTimer: ReturnType<typeof setTimeout>
+        const handleResize = () => {
+          clearTimeout(resizeTimer)
+          resizeTimer = setTimeout(() => {
+            ScrollTrigger.refresh()
+          }, 200)
+        }
+
+        window.addEventListener("resize", handleResize)
+
+        return () => {
+          window.removeEventListener("resize", handleResize)
+          splitTitle.revert()
+          splitBodyInstances.forEach((instance) => instance.revert())
+        }
+      })
+    }, container)
+
+    return ctx
+  }
+
+  initAnimation()
+</script>

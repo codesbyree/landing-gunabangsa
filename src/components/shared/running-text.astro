@@ -1,0 +1,74 @@
+<div data-rt class="overflow-hidden border-y border-red-800 bg-red-500 py-2 shadow-[inset_0_0_4px_rgba(0,0,0,.4)]">
+  <div data-rt-content class="flex items-center gap-16 whitespace-nowrap will-change-transform">
+    {
+      [1, 2, 3, 4, 5, 6].map((i) => (
+        <div class="flex items-center gap-20 text-xl font-black tracking-wide text-red-50 uppercase">
+          <span class="block rounded-full bg-red-600 px-2 shadow-sm">HEALTHMED-IC</span>
+          <div class="rounded-full shadow-sm">
+            <div class="grid h-8 w-8 place-items-center rounded-full border border-red-200 bg-radial from-red-50 to-red-200 shadow-[inset_0_0_4px_rgba(0,0,0,.4)]">
+              <div class="absolute flex h-7 w-7 items-center overflow-hidden rounded-full bg-linear-to-tl from-red-200 to-red-50">
+                <div class="h-1 w-7 bg-red-100 shadow-[inset_0_0_4px_rgba(0,0,0,.3)]" />
+              </div>
+            </div>
+          </div>
+          <span class="block rounded-full bg-red-600 px-2 shadow-sm">2026</span>
+          <div class="rounded-full shadow-sm">
+            <div class="grid h-8 w-8 place-items-center rounded-full border border-red-200 bg-radial from-red-50 to-red-200 shadow-[inset_0_0_4px_rgba(0,0,0,.4)]">
+              <div class="absolute flex h-7 w-7 items-center overflow-hidden rounded-full bg-linear-to-tl from-red-200 to-red-50">
+                <div class="h-1 w-7 bg-red-100 shadow-[inset_0_0_4px_rgba(0,0,0,.3)]" />
+              </div>
+            </div>
+          </div>
+          <span class="block rounded-full bg-red-600 px-2 shadow-sm">HEALTHMED-IC</span>
+          <div class="rounded-full shadow-sm">
+            <div class="grid h-8 w-8 place-items-center rounded-full border border-red-200 bg-radial from-red-50 to-red-200 shadow-[inset_0_0_4px_rgba(0,0,0,.4)]">
+              <div class="absolute flex h-7 w-7 items-center overflow-hidden rounded-full bg-linear-to-tl from-red-200 to-red-50">
+                <div class="h-1 w-7 bg-red-100 shadow-[inset_0_0_4px_rgba(0,0,0,.3)]" />
+              </div>
+            </div>
+          </div>
+          <span class="block rounded-full bg-red-600 px-2 shadow-sm">2026</span>
+          <div class="rounded-full shadow-sm">
+            <div class="grid h-8 w-8 place-items-center rounded-full border border-red-200 bg-radial from-red-50 to-red-200 shadow-[inset_0_0_4px_rgba(0,0,0,.4)]">
+              <div class="absolute flex h-7 w-7 items-center overflow-hidden rounded-full bg-linear-to-tl from-red-200 to-red-50">
+                <div class="h-1 w-7 bg-red-100 shadow-[inset_0_0_4px_rgba(0,0,0,.3)]" />
+              </div>
+            </div>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</div>
+
+<script>
+  import { gsap } from "@/lib/gsap"
+
+  function initAnimation() {
+    const container = document.querySelector("[data-rt]")
+    if (!container) return
+
+    const ctx = gsap.context(() => {
+      const rtc = container.querySelector("[data-rt-content]")
+
+      gsap.fromTo(
+        rtc,
+        { x: 0 },
+        {
+          xPercent: -50,
+          ease: "none",
+          scrollTrigger: {
+            trigger: container,
+            start: "top bottom",
+            end: "bottom top",
+            scrub: true,
+          },
+        }
+      )
+    }, container)
+
+    return ctx
+  }
+
+  initAnimation()
+</script>
