@@ -2,10 +2,12 @@
 import Layout from "@/layouts/main.astro"
 import Breadcrumbs from "@/components/shared/breadcrumbs.astro"
 import VisaSection from "@/components/visa-page/visa-section.astro"
+
+import coverImage from "@/assets/images/hero-carousel/slide - 6.webp"
 ---
 
 <Layout>
-  <Breadcrumbs pageName="Visa" coverImageUrl="/assets/images/hero-carousel/slide - 6.webp" />
+  <Breadcrumbs pageName="Visa" coverImageUrl={coverImage} />
 
   <main>
     <VisaSection />

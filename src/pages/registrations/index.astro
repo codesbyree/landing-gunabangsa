@@ -6,10 +6,12 @@ import InformationSection from "@/components/registration-page/information-secti
 import RunningText from "@/components/shared/running-text.astro"
 import { Separator } from "@/components/ui/separator"
 import CombinedRegistrationSection from "@/components/registration-page/combined-registration-section/index.astro"
+
+import coverImage from "@/assets/images/hero-carousel/slide - 6.webp"
 ---
 
 <Layout>
-  <Breadcrumbs pageName="Registrations" coverImageUrl="/assets/images/hero-carousel/slide - 6.webp" />
+  <Breadcrumbs pageName="Registrations" coverImageUrl={coverImage} />
   <main>
     <InformationSection />
     <RunningText />

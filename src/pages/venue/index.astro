@@ -2,10 +2,12 @@
 import Layout from "@/layouts/main.astro"
 import VenueSection from "@/components/venue-page/venue-section.astro"
 import Breadcrumbs from "@/components/shared/breadcrumbs.astro"
+
+import coverImage from "@/assets/images/hero-carousel/slide - 6.webp"
 ---
 
 <Layout>
-  <Breadcrumbs pageName="Venue" coverImageUrl="/assets/images/hero-carousel/slide - 6.webp" />
+  <Breadcrumbs pageName="Venue" coverImageUrl={coverImage} />
 
   <main>
     <VenueSection />

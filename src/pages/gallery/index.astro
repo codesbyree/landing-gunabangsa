@@ -2,13 +2,12 @@
 import Layout from "@/layouts/main.astro"
 import Breadcrumbs from "@/components/shared/breadcrumbs.astro"
 import GallerySection from "@/components/gallery-page/gallery-section.astro"
+
+import coverImage from "@/assets/images/hero-carousel/slide - 5.webp"
 ---
 
 <Layout>
-  <Breadcrumbs
-    pageName="Gallery"
-    coverImageUrl="/assets/images/hero-carousel/slide - 5.webp"
-  />
+  <Breadcrumbs pageName="Gallery" coverImageUrl={coverImage} />
   <main>
     <GallerySection />
   </main>

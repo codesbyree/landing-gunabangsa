@@ -4,12 +4,14 @@ import Breadcrumbs from "@/components/shared/breadcrumbs.astro"
 import WelcomeSection from "@/components/speakers-page/welcome-section.astro"
 import KeynoteSection from "@/components/speakers-page/keynote-section.astro"
 import InvitedSection from "@/components/speakers-page/invited-section.astro"
+
+import coverImage from "@/assets/images/hero-carousel/slide - 6.webp"
 ---
 
 <Layout>
-  <Breadcrumbs pageName="Speakers" coverImageUrl="/assets/images/hero-carousel/slide - 6.webp" />
+  <Breadcrumbs pageName="Speakers" coverImageUrl={coverImage} />
   <main>
-    <WelcomeSection />
+    <!-- <WelcomeSection /> -->
     <KeynoteSection />
     <InvitedSection />
   </main>

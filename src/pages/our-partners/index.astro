@@ -2,10 +2,12 @@
 import Layout from "@/layouts/main.astro"
 import Breadcrumbs from "@/components/shared/breadcrumbs.astro"
 import PartnersSection from "@/components/sponsor-page/partners-section.astro"
+
+import coverImage from "@/assets/images/hero-carousel/slide - 10.webp"
 ---
 
 <Layout>
-  <Breadcrumbs pageName="Our Partners" coverImageUrl="/assets/images/hero-carousel/slide - 10.webp" />
+  <Breadcrumbs pageName="Our Partners" coverImageUrl={coverImage} />
   <main>
     <PartnersSection />
   </main>

@@ -1,10 +1,4 @@
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { RecordIcon } from "@hugeicons/core-free-icons"
 import { HugeiconsIcon } from "@hugeicons/react"
 import type { ReactNode } from "react"
@@ -16,12 +10,7 @@ type Props = {
   description: string
 }
 
-export default function ResearchTrackCard({
-  title,
-  items,
-  icon,
-  description,
-}: Props) {
+export default function ResearchTrackCard({ title, items, icon, description }: Props) {
   return (
     <Card className="shadow-[inset_0_0_10px_rgba(0,0,0,0.1)] transition-transform hover:-translate-y-1">
       <CardHeader>
@@ -34,17 +23,9 @@ export default function ResearchTrackCard({
       <CardContent>
         <div className="flex flex-col gap-2">
           {items.map((item, index) => (
-            <div
-              key={index}
-              className="flex gap-2 opacity-75 transition-opacity hover:opacity-60"
-            >
-              <HugeiconsIcon
-                icon={RecordIcon}
-                size={16}
-                className="shrink-0 text-red-400"
-                color="currentColor"
-              />
-              <p>{item}</p>
+            <div key={index} className="flex gap-2 opacity-75 transition-opacity hover:opacity-60">
+              <HugeiconsIcon icon={RecordIcon} size={16} className="mt-1 shrink-0 text-red-400" color="currentColor" />
+              <p className="leading-6">{item}</p>
             </div>
           ))}
         </div>

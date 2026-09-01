@@ -1,12 +1,4 @@
-import {
-  Users,
-  ClipboardList,
-  FlaskConical,
-  BookOpen,
-  MonitorDot,
-  UserGroup02Icon,
-  Package,
-} from "@hugeicons/core-free-icons"
+import { Users, ClipboardList, FlaskConical, BookOpen, MonitorDot, UserGroup02Icon, Package } from "@hugeicons/core-free-icons"
 import { HugeiconsIcon } from "@hugeicons/react"
 import type { ReactNode } from "react"
 
@@ -269,15 +261,13 @@ const sections: CommitteeSectionTypes[] = [
 
 export default function CommitteeCardRenderer() {
   return (
-    <div className="flex flex-col gap-8">
+    <div className="flex flex-col gap-10">
       {sections.map((section, idx) => (
-        <div key={idx} className="space-y-4">
+        <div key={idx} className="space-y-5">
           <div className="flex items-center gap-4">
             <div className="text-red-800">{section.icon}</div>
 
-            <h2 className="text-lg font-medium text-red-800 md:text-xl">
-              {section.title}
-            </h2>
+            <h2 className="text-lg font-medium text-red-800 md:text-xl">{section.title}</h2>
           </div>
 
           <div className="grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3">
