@@ -12,12 +12,7 @@ interface Props {
   index: number
 }
 
-export default function PreparationSectionCard({
-  title,
-  items,
-  icon,
-  index,
-}: Props) {
+export default function PreparationSectionCard({ title, items, icon, index }: Props) {
   return (
     <Card
       className={cn(
@@ -35,16 +30,8 @@ export default function PreparationSectionCard({
       <CardContent>
         <div className="flex flex-col gap-2">
           {items.map((item) => (
-            <div
-              key={item}
-              className="flex gap-2 opacity-75 transition-opacity hover:opacity-60"
-            >
-              <HugeiconsIcon
-                icon={RecordIcon}
-                size={16}
-                className="shrink-0 text-red-400"
-                color="currentColor"
-              />
+            <div key={item} className="flex gap-2 leading-8 opacity-75 transition-opacity hover:opacity-60">
+              <HugeiconsIcon icon={RecordIcon} size={16} className="mt-2 shrink-0 text-red-400" color="currentColor" />
               <p>{item}</p>
             </div>
           ))}

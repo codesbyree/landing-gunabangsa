@@ -13,31 +13,40 @@ import { AspectRatio } from "../ui/aspect-ratio"
     />
 
     <div class="grid w-full grid-cols-1 items-start gap-4 md:grid-cols-2 md:gap-10 lg:mb-16">
-      <div class="col-start-2 flex flex-col gap-8">
+      <div class="col-start-2 flex flex-col gap-8 leading-8">
         <article class="flex flex-col gap-4">
-          <h2 class="font-semibold text-red-900">1. Access your account dashboard</h2>
+          <h2 class="rounded-tl-full rounded-bl-full bg-red-100/50">
+            <span class="mr-3 inline-block rounded-full bg-red-900 px-4 py-2 text-xs text-red-50">01</span>
+            <span class="font-semibold text-red-900">Access your account dashboard</span>
+          </h2>
+
           <p class="text-gray-600">To access your account dashboard, you need to be logged in to your account (See the login tutorial above).</p>
         </article>
-        <Separator />
 
         <article class="flex flex-col gap-4">
-          <h2 class="font-semibold text-red-900">2. Select an active proceeding</h2>
+          <h2 class="rounded-tl-full rounded-bl-full bg-red-100/50">
+            <span class="mr-3 inline-block rounded-full bg-red-900 px-4 py-2 text-xs text-red-50">02</span>
+            <span class="font-semibold text-red-900">Select an active proceeding</span>
+          </h2>
+
           <p class="text-gray-600">
             In your dashboard, scroll down to the "Active Proceedings" section and then click "View Details" in the proceeding card of your choice.
           </p>
-          <img src="/assets/images/tutorial/active-proceedings.webp" alt="" class="w-full" />
+          <img src="/assets/images/tutorial/active-proceedings.webp" alt="" class="w-full rounded-md" />
         </article>
-        <Separator />
 
         <article class="flex flex-col gap-4">
-          <h2 class="font-semibold text-red-900">3. Submit your paper</h2>
+          <h2 class="rounded-tl-full rounded-bl-full bg-red-100/50">
+            <span class="mr-3 inline-block rounded-full bg-red-900 px-4 py-2 text-xs text-red-50">03</span>
+            <span class="font-semibold text-red-900">Submit your paper</span>
+          </h2>
+
           <p class="text-gray-600">
             In the proceeding details, click "Submit Paper". You then will be redirected to the submission page. There, carefully follow the
             instructions on how to submit your manuscript.
           </p>
-          <img src="/assets/images/tutorial/proc-details.webp" alt="" class="w-full" />
+          <img src="/assets/images/tutorial/proc-details.webp" alt="" class="w-full rounded-md" />
         </article>
-        <Separator />
       </div>
     </div>
   </div>

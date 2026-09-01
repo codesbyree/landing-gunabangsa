@@ -12,28 +12,15 @@ const cardContents = [
       "Respond directly to reviewer comments in the comment field of the IGERS system.",
       "Carefully proofread your manuscript for spelling, grammar, and formatting errors before submission.",
     ],
-    icon: (
-      <HugeiconsIcon
-        icon={LicenseDraftIcon}
-        size={28}
-        className="shrink-0 text-red-400"
-        color="currentColor"
-      />
-    ),
+    icon: <HugeiconsIcon icon={LicenseDraftIcon} size={28} className="shrink-0 text-red-400" color="currentColor" />,
   },
 ]
 
 export default function PreparationCardRenderer() {
   return (
-    <div className="relative z-10 grid grid-cols-1 gap-2 bg-red-50/80 text-slate-600 lg:grid-cols-2 lg:grid-rows-2">
+    <div className="relative z-10 grid grid-cols-1 gap-2 bg-red-50/80 text-slate-700 lg:grid-cols-2 lg:grid-rows-2">
       {cardContents.map((card, i) => (
-        <PreparationSectionCard
-          key={card.title}
-          title={card.title}
-          items={card.items}
-          icon={card.icon}
-          index={i}
-        />
+        <PreparationSectionCard key={card.title} title={card.title} items={card.items} icon={card.icon} index={i} />
       ))}
     </div>
   )

@@ -27,7 +27,7 @@ const cardContents = [
 
 export default function PreparationCardRenderer() {
   return (
-    <div className="relative z-10 grid grid-cols-1 gap-2 text-slate-600 lg:grid-cols-2">
+    <div className="relative z-10 grid grid-cols-1 gap-2 text-slate-700 lg:grid-cols-2">
       {cardContents.map((card, i) => (
         <PreparationSectionCard key={card.title} title={card.title} items={card.items} icon={card.icon} index={i} />
       ))}

@@ -43,21 +43,21 @@ const questions = [
   <div class="flex w-full max-w-7xl flex-1 flex-col py-16 lg:py-26">
     <SectionTitleAlt title="Paper Upload FAQs" subtitle="FAQ" />
 
-    <div class="relative grid grid-cols-1 gap-4 md:grid-cols-[.55fr_1fr] md:gap-10 lg:gap-20">
+    <div class="relative grid grid-cols-1 gap-5 md:grid-cols-[.55fr_1fr] md:gap-10 lg:gap-20">
       <div class="h-full w-full"></div>
 
-      <ItemGroup className="gap-2">
+      <ItemGroup className="gap-2 leading-8">
         {
           questions.map((faq) => (
             <Item variant="outline" className="items-start bg-card shadow-[inset_0_0_10px_rgba(0,0,0,.1)] hover:-translate-y-1 transition-transform">
-              <ItemMedia variant="icon">
+              <ItemMedia variant="icon" className="mt-1">
                 <HugeiconsIcon icon={BubbleChatQuestionIcon} size={16} color="currentColor" />
               </ItemMedia>
 
               <ItemContent>
-                <ItemTitle className="text-red-950">{faq.title}</ItemTitle>
+                <ItemTitle className="text-red-950 leading-6">{faq.title}</ItemTitle>
 
-                <p class="text-slate-600">{faq.content}</p>
+                <p class="text-slate-500">{faq.content}</p>
               </ItemContent>
             </Item>
           ))

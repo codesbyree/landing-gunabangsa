@@ -5,10 +5,12 @@ import JoinAsAuthorSection from "@/components/initial-submission-page/join-as-au
 import LoginSection from "@/components/initial-submission-page/login-section.astro"
 import CreateAccountSection from "@/components/initial-submission-page/create-account-section.astro"
 import PrepareArticleSubmissionSection from "@/components/initial-submission-page/prepare-article-submission.astro"
+
+import coverImage from "@/assets/images/hero-carousel/slide - 8.webp"
 ---
 
 <Layout>
-  <Breadcrumbs pageName="Initial Submission Instructions" coverImageUrl="/assets/images/hero-carousel/slide - 8.webp" />
+  <Breadcrumbs pageName="Initial Submission Instructions" coverImageUrl={coverImage} />
   <main>
     <CreateAccountSection />
     <LoginSection />

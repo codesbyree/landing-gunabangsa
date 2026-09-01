@@ -13,28 +13,15 @@ const cardContents = [
       "If figures are reproduced from other sources, the corresponding copyright permission form must be provided for each figure.",
       "Use a reference management tool (e.g., Mendeley, Zotero) to minimize formatting errors in the references section.",
     ],
-    icon: (
-      <HugeiconsIcon
-        icon={LicenseDraftIcon}
-        size={28}
-        className="shrink-0 text-red-400"
-        color="currentColor"
-      />
-    ),
+    icon: <HugeiconsIcon icon={LicenseDraftIcon} size={28} className="shrink-0 text-red-400" color="currentColor" />,
   },
 ]
 
 export default function PreparationCardRenderer() {
   return (
-    <div className="relative z-10 grid grid-cols-1 gap-2 bg-red-50/80 text-slate-600 lg:grid-cols-2">
+    <div className="relative z-10 grid grid-cols-1 gap-2 bg-red-50/80 text-slate-700 lg:grid-cols-2">
       {cardContents.map((card) => (
-        <PreparationSectionCard
-          key={card.title}
-          title={card.title}
-          items={card.items}
-          icon={card.icon}
-          index={1}
-        />
+        <PreparationSectionCard key={card.title} title={card.title} items={card.items} icon={card.icon} index={1} />
       ))}
 
       <div className="relative h-max overflow-hidden rounded-2xl bg-red-900 p-6 text-white shadow-[inset_0_0_10px_rgba(0,0,0,0.5)] transition-transform hover:-translate-y-1">
@@ -58,17 +45,12 @@ export default function PreparationCardRenderer() {
           </svg>
         </div>
 
-        <div className="relative z-10 flex flex-col items-center justify-between gap-12">
+        <div className="relative z-10 flex flex-col items-center justify-between gap-12 leading-8">
           <div className="max-w-2xl flex-1">
-            <h4 className="mb-4 text-[10px] font-black tracking-[0.3em] text-red-300 uppercase">
-              Assistance
-            </h4>
-            <p className="mb-4 text-base leading-tight font-bold">
-              Manuscript Formatting and Editing Assistance
-            </p>
-            <p className="text-sm leading-relaxed font-medium text-slate-50/70">
-              We understand that preparing the final camera-ready manuscript can
-              be challenging. We offer a professional formatting and editing
+            <h4 className="mb-4 text-[10px] font-black tracking-[0.3em] text-red-300 uppercase">Assistance</h4>
+            <p className="mb-4 text-base font-bold">Manuscript Formatting and Editing Assistance</p>
+            <p className="font-medium text-slate-50/70">
+              We understand that preparing the final camera-ready manuscript can be challenging. We offer a professional formatting and editing
               service through our trusted partner.
             </p>
           </div>
@@ -92,10 +74,7 @@ export default function PreparationCardRenderer() {
                 <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path>
                 <rect x="2" y="4" width="20" height="16" rx="2"></rect>
               </svg>
-              <a
-                href="mailto:nutral@nusaputra.ac.id"
-                className="text-sm font-medium transition-colors hover:text-red-400"
-              >
+              <a href="mailto:nutral@nusaputra.ac.id" className="text-sm font-medium transition-colors hover:text-red-400">
                 nutral@nusaputra.ac.id
               </a>
             </div>

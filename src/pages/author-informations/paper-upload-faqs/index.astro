@@ -2,13 +2,12 @@
 import Layout from "@/layouts/main.astro"
 import Breadcrumbs from "@/components/shared/breadcrumbs.astro"
 import QuestionsSection from "@/components/author-faq-page/questions-section.astro"
+
+import coverImage from "@/assets/images/hero-carousel/slide - 3.webp"
 ---
 
 <Layout>
-  <Breadcrumbs
-    pageName="Paper Upload FAQs"
-    coverImageUrl="/assets/images/hero-carousel/slide - 3.webp"
-  />
+  <Breadcrumbs pageName="Paper Upload FAQs" coverImageUrl={coverImage} />
 
   <main>
     <QuestionsSection />
