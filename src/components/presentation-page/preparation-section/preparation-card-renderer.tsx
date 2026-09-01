@@ -11,14 +11,7 @@ const cardContents = [
       "To avoid software compatibility issues (MS PowerPoint), speakers are strongly advised to embed all fonts in their PowerPoint file and bring a backup version in PDF format.",
       "Speakers must arrive in the session room 30 minutes before the session starts to report to the session chair.If another session is taking place prior to your scheduled time, please wait until your session begins so as not to disturb ongoing presentations.",
     ],
-    icon: (
-      <HugeiconsIcon
-        icon={LicenseDraftIcon}
-        size={28}
-        className="shrink-0 text-red-400"
-        color="currentColor"
-      />
-    ),
+    icon: <HugeiconsIcon icon={LicenseDraftIcon} size={28} className="shrink-0 text-red-400" color="currentColor" />,
   },
   {
     title: "General Consideration",
@@ -28,28 +21,15 @@ const cardContents = [
       "All fonts, including those on graphics, should be 18 point size or larger.",
       "Graphs and charts should have bold lines and symbols with sharp contrast against the background.",
     ],
-    icon: (
-      <HugeiconsIcon
-        icon={LicenseDraftIcon}
-        size={28}
-        className="shrink-0 text-red-400"
-        color="currentColor"
-      />
-    ),
+    icon: <HugeiconsIcon icon={LicenseDraftIcon} size={28} className="shrink-0 text-red-400" color="currentColor" />,
   },
 ]
 
 export default function PreparationCardRenderer() {
   return (
-    <div className="relative z-10 grid grid-cols-1 gap-2 bg-red-50/80 text-slate-600 lg:grid-cols-2">
+    <div className="relative z-10 grid grid-cols-1 gap-2 text-slate-600 lg:grid-cols-2">
       {cardContents.map((card, i) => (
-        <PreparationSectionCard
-          key={card.title}
-          title={card.title}
-          items={card.items}
-          icon={card.icon}
-          index={i}
-        />
+        <PreparationSectionCard key={card.title} title={card.title} items={card.items} icon={card.icon} index={i} />
       ))}
     </div>
   )

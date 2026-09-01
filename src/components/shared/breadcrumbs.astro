@@ -1,7 +1,9 @@
 ---
+import { Image } from "astro:assets"
+
 interface Props {
   pageName: string
-  coverImageUrl: string
+  coverImageUrl: ImageMetadata
 }
 
 const { pageName, coverImageUrl } = Astro.props
@@ -21,5 +23,5 @@ const { pageName, coverImageUrl } = Astro.props
   <div class="absolute inset-0 z-20 bg-linear-to-tl from-orange-800 via-transparent to-orange-800 opacity-50"></div>
   <div class="absolute inset-0 z-10 bg-black opacity-50"></div>
 
-  <img src={coverImageUrl} alt={pageName} class="h-full w-full object-cover" />
+  <Image src={coverImageUrl} alt={pageName} class="h-60 w-full object-cover lg:h-100" />
 </div>

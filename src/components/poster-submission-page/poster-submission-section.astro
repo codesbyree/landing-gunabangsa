@@ -1,0 +1,281 @@
+---
+import SectionTitleAlt from "@/components/shared/section-title-alt.astro"
+---
+
+<section class="flex w-full justify-center overflow-hidden bg-red-50 px-4 xl:rounded-br-4xl xl:rounded-bl-4xl">
+  <div class="flex w-full max-w-7xl flex-1 flex-col py-16 lg:py-26">
+    <SectionTitleAlt title="About Poster Presentation" subtitle="PREPARATION" />
+
+    <div class="relative grid grid-cols-1 gap-4 md:grid-cols-[.55fr_1fr] md:gap-10 lg:gap-20">
+      <div></div>
+
+      <div class="flex flex-col gap-10 leading-8 text-slate-700">
+        <div class="space-y-5">
+          <p>
+            The Poster Presentation is a scientific dissemination session of the 1st HEALTHMED-IC 2026. It provides an opportunity for researchers,
+            clinicians, academics, students, and healthcare professionals to communicate research findings in a concise, visual, and accessible
+            format.
+          </p>
+
+          <p>
+            The conference theme is “Innovating Healthcare Excellence: Integrating Advanced Life Treatment and Human- Centered Medicine for a
+            Sustainable Future.” Poster submissions should be relevant to the conference scope and demonstrate scientific or practical contributions
+            to healthcare and human medicine.
+          </p>
+        </div>
+
+        <div class="mt-4 space-y-5">
+          <p class="rounded-tl-full rounded-bl-full bg-red-100/50">
+            <span class="mr-3 inline-block rounded-full bg-red-900 px-4 py-2 text-xs text-red-50">01</span>
+            <span class="font-semibold text-red-900">Eligibility and Submission</span>
+          </p>
+
+          <ul class="list-outside list-disc space-y-3">
+            {
+              [
+                "Poster presenters must have an accepted abstract or research contribution according to the conference submission and review process.",
+                "The submitted work must be original and must not have been simultaneously submitted for publication or presentation in a manner that violates the authors’ institutional or publisher policies.",
+                "The content of the poster must be consistent with the submitted abstract. Major changes to the research title, authorship, or scientific content should be communicated to the Organizing Committee.",
+                "All authors are responsible for the accuracy, originality, ethical compliance, and appropriate citation of the material presented.",
+                "Authors are encouraged to consult the official conference website for the latest submission instructions and deadlines.",
+              ].map((item) => <li class="ml-6 pl-2">{item}</li>)
+            }
+          </ul>
+        </div>
+
+        <div class="mt-4 space-y-8">
+          <p class="rounded-tl-full rounded-bl-full bg-red-100/50">
+            <span class="mr-3 inline-block rounded-full bg-red-900 px-4 py-2 text-xs text-red-50">02</span>
+            <span class="font-semibold text-red-900">Recommended Poster Structure</span>
+          </p>
+
+          <table>
+            <thead class="text-left font-medium text-red-800/70">
+              <tr class="bg-red-100/50">
+                <th class="p-1 pl-2">Section</th>
+                <th class="p-1 pl-2">Recommended Content</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-2 text-slate-500">Title</td>
+                <td class="p-2">Concise research title reflecting the main topic or finding.</td>
+              </tr>
+              <tr>
+                <td class="p-2 text-slate-500">Authors & Affiliations</td>
+                <td class="p-2">Full names of all authors, institutional affiliations, country, and corresponding author/contact information.</td>
+              </tr>
+              <tr>
+                <td class="p-2 text-slate-500">Background / Introduction</td>
+                <td class="p-2">Brief context, research gap, and rationale for the study.</td>
+              </tr>
+              <tr>
+                <td class="p-2 text-slate-500">Objective(s)</td>
+                <td class="p-2">Clear statement of the main research question, aim, or hypothesis.</td>
+              </tr>
+              <tr>
+                <td class="p-2 text-slate-500">Methods</td>
+                <td class="p-2">Study design, setting, participants/sample, instruments, procedures, and statistical analysis as appropriate.</td>
+              </tr>
+              <tr>
+                <td class="p-2 text-slate-500">Results</td>
+                <td class="p-2">Key findings supported by tables, graphs, figures, images, or other relevant visualizations.</td>
+              </tr>
+              <tr>
+                <td class="p-2 text-slate-500">Discussion</td>
+                <td class="p-2">Brief interpretation of the principal findings and their relevance.</td>
+              </tr>
+              <tr>
+                <td class="p-2 text-slate-500">Conclusion</td>
+                <td class="p-2">Concise statements directly answering the objective(s).</td>
+              </tr>
+              <tr>
+                <td class="p-2 text-slate-500">Recommendations / Implications</td>
+                <td class="p-2">Practical, clinical, public health, educational, technological, or research implications where applicable.</td>
+              </tr>
+              <tr>
+                <td class="p-2 text-slate-500">References</td>
+                <td class="p-2">Essential references only, using a consistent academic citation style.</td>
+              </tr>
+              <tr>
+                <td class="p-2 text-slate-500">Acknowledgements / Funding / Conflict of Interest</td>
+                <td class="p-2">Include where applicable and when relevant to the research.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="mt-4 space-y-5">
+          <p class="rounded-tl-full rounded-bl-full bg-red-100/50">
+            <span class="mr-3 inline-block rounded-full bg-red-900 px-4 py-2 text-xs text-red-50">03</span>
+            <span class="font-semibold text-red-900">Poster Specifications</span>
+          </p>
+
+          <ul class="list-outside list-disc space-y-3">
+            {
+              [
+                "Recommended size: A0 portrait (84.1 cm × 118.9 cm / 33.1 in × 46.8 in).",
+                "Orientation: Portrait. If another size or orientation is required by the conference venue, presenters should follow the latest instruction issued by the Organizing Committee.",
+                "File format for submission: PDF (preferred).",
+                "Use a clear, professional, high-contrast layout with sufficient white space.",
+                "Recommended minimum font sizes: Title 70–90 pt; section headings 32–44 pt; body text 24–32 pt. Adjust as necessary to maintain readability at a distance.",
+                "Use high-resolution figures and images. Avoid stretched, pixelated, or excessively compressed visuals.",
+                "Graphs and tables should be simple, clearly labeled, and accompanied by appropriate units and legends.",
+                "Use consistent typography, alignment, numbering, and citation style throughout the poster.",
+                "Avoid excessive text. Prioritize key findings and visual communication.",
+                "All figures, photographs, icons, and other third-party materials must be properly attributed or used with appropriate permission/licensing.",
+              ].map((item) => <li class="ml-6 pl-2">{item}</li>)
+            }
+          </ul>
+        </div>
+
+        <div class="mt-4 space-y-5">
+          <p class="rounded-tl-full rounded-bl-full bg-red-100/50">
+            <span class="mr-3 inline-block rounded-full bg-red-900 px-4 py-2 text-xs text-red-50">04</span>
+            <span class="font-semibold text-red-900">Research Integrity and Ethical Requirements</span>
+          </p>
+
+          <ul class="list-outside list-disc space-y-3">
+            {
+              [
+                "Human and animal research must comply with applicable ethical standards and institutional requirements.",
+                "Where applicable, state the ethics approval/clearance information, informed consent status, registration number, or other relevant compliance information.",
+                "Do not include identifiable patient information, photographs, or confidential data unless appropriate consent and authorization have been obtained.",
+                "Declare funding sources and potential conflicts of interest where applicable.",
+                "Plagiarism, fabrication, falsification, duplicate submission, and inappropriate authorship are not permitted.",
+              ].map((item, index) => <li class="ml-6 pl-2">{item}</li>)
+            }
+          </ul>
+        </div>
+
+        <div class="mt-4 space-y-5">
+          <p class="rounded-tl-full rounded-bl-full bg-red-100/50">
+            <span class="mr-3 inline-block rounded-full bg-red-900 px-4 py-2 text-xs text-red-50">05</span>
+            <span class="font-semibold text-red-900">Submission Procedure</span>
+          </p>
+
+          <ul class="list-outside list-disc space-y-3">
+            {
+              [
+                "Prepare the final poster according to this guideline.",
+                "Save the poster as a PDF using the recommended file naming convention: HEALTHMEDIC2026_Poster_[FirstAuthorSurname].pdf",
+                "Submit the poster through the designated conference submission system or channel communicated by the Organizing Committee.",
+                "Check the final PDF before submission to ensure that fonts, figures, tables, symbols, and special characters display correctly.",
+                "Keep a copy of the submitted file for presentation purposes.",
+              ].map((item) => <li class="ml-6 pl-2">{item}</li>)
+            }
+          </ul>
+        </div>
+
+        <div class="mt-4 space-y-5">
+          <p class="rounded-tl-full rounded-bl-full bg-red-100/50">
+            <span class="mr-3 inline-block rounded-full bg-red-900 px-4 py-2 text-xs text-red-50">06</span>
+            <span class="font-semibold text-red-900">Poster Presentation</span>
+          </p>
+
+          <ul class="list-outside list-disc space-y-3">
+            {
+              [
+                "Presenters should be available during the designated poster presentation session.",
+                "The presenting author should be prepared to provide a brief explanation of the study and answer questions from participants, reviewers, or other delegates.",
+                "The presentation should emphasize the research problem, methodology, principal findings, and implications.",
+                "Presenters should follow the conference schedule and technical instructions provided by the Organizing Committee.",
+              ].map((item) => <li class="ml-6 pl-2">{item}</li>)
+            }
+          </ul>
+
+          <p class="mt-2 ml-6 text-sm">
+            For virtual or hybrid presentation arrangements, presenters must follow the specific technical instructions issued by the conference.
+          </p>
+        </div>
+
+        <div class="mt-4 space-y-5">
+          <p class="rounded-tl-full rounded-bl-full bg-red-100/50">
+            <span class="mr-3 inline-block rounded-full bg-red-900 px-4 py-2 text-xs text-red-50">07</span>
+            <span class="font-semibold text-red-900">Recommended Visual Layout</span>
+          </p>
+
+          <p>
+            A three-column layout is recommended for portrait posters. A typical flow is: (1) Title and authors, (2) Background and Objective, (3)
+            Methods, (4) Results, (5) Discussion, (6) Conclusion/Implications, and (7) References/Acknowledgements. The Results section should receive
+            the greatest visual emphasis.
+          </p>
+        </div>
+
+        <div class="mt-4 space-y-5">
+          <p class="rounded-tl-full rounded-bl-full bg-red-100/50">
+            <span class="mr-3 inline-block rounded-full bg-red-900 px-4 py-2 text-xs text-red-50">08</span>
+            <span class="font-semibold text-red-900">Final Checklist</span>
+          </p>
+
+          <ul class="list-outside list-disc space-y-3">
+            {
+              [
+                "Poster follows the recommended A0 portrait format.",
+                "Title, authors, affiliations, and corresponding author information are correct.",
+                "Abstract content and poster content are consistent.",
+                "Objectives and methods are clearly stated.",
+                "Main results are easy to identify and supported by appropriate visuals.",
+                "Conclusion directly addresses the study objective(s).",
+                "References and third-party materials are properly cited.",
+                "Ethics, funding, and conflict-of-interest information are included where applicable.",
+                "PDF has been checked for readability and technical errors.",
+                "File name follows the recommended convention.",
+              ].map((item) => <li class="ml-6 pl-2">{item}</li>)
+            }
+          </ul>
+        </div>
+
+        <div class="mt-4 space-y-5">
+          <p class="rounded-tl-full rounded-bl-full bg-red-100/50">
+            <span class="mr-3 inline-block rounded-full bg-red-900 px-4 py-2 text-xs text-red-50">09</span>
+            <span class="font-semibold text-red-900">Final Checklist</span>
+          </p>
+
+          <ul class="list-outside list-disc space-y-3">
+            {
+              [
+                "Poster follows the recommended A0 portrait format.",
+                "Title, authors, affiliations, and corresponding author information are correct.",
+                "Abstract content and poster content are consistent.",
+                "Objectives and methods are clearly stated.",
+                "Main results are easy to identify and supported by appropriate visuals.",
+                "Conclusion directly addresses the study objective(s).",
+                "References and third-party materials are properly cited.",
+                "Ethics, funding, and conflict-of-interest information are included where applicable.",
+                "PDF has been checked for readability and technical errors.",
+                "File name follows the recommended convention.",
+              ].map((item) => <li class="ml-6 pl-2">{item}</li>)
+            }
+          </ul>
+        </div>
+
+        <div class="mt-4 space-y-8">
+          <p class="rounded-tl-full rounded-bl-full bg-red-100/50">
+            <span class="mr-3 inline-block rounded-full bg-red-900 px-4 py-2 text-xs text-red-50">10</span>
+            <span class="font-semibold text-red-900">Important Dates</span>
+          </p>
+
+          <table class="w-full">
+            <thead class="text-left font-medium text-red-800/70">
+              <tr class="bg-red-100/50">
+                <th class="p-1 pl-2">Event</th>
+                <th class="p-1 pl-2">Date</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-2 text-slate-500">Poster Submission Deadline</td>
+                <td class="p-2">October, 15th 2026</td>
+              </tr>
+              <tr>
+                <td class="p-2 text-slate-500">Poster Presentation</td>
+                <td class="p-2">November, 5th – 7th 2026</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

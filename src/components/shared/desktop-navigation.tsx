@@ -34,6 +34,11 @@ const authorInformationMenuContent = [
     href: "/author-informations/paper-upload-faqs",
     description: "Find out more about the paper upload process and any common issues you may encounter",
   },
+  {
+    title: "Poster Submission Guidelines",
+    href: "/author-informations/poster-submission",
+    description: "Find out more about the poster upload process and any common issues you may encounter",
+  },
 ]
 
 export default function DesktopNavigation() {
