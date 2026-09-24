@@ -1,0 +1,30 @@
+---
+import SectionTitle from "@/components/shared/section-title.astro"
+import { Separator } from "../ui/separator"
+---
+
+<section class="flex w-full justify-center bg-red-50 px-4">
+  <div class="w-fullmax-w-7xl flex max-w-7xl flex-1 flex-col py-16 lg:py-26">
+    <SectionTitle
+      title="Video Tutorial on How to Use IGERS"
+      subtitle="TUTORIAL"
+      description="Watch this video to learn how to submit your manuscript"
+    />
+
+    <div class="grid w-full grid-cols-1 items-start gap-5 leading-8 md:grid-cols-2 md:gap-10 lg:mb-16">
+      <div class="flex flex-col gap-10 md:col-start-2">
+        <article class="flex flex-col gap-5">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/2K4tu0Ffd5U?si=4x4PmJZ7HCA6wa0t"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen></iframe>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>

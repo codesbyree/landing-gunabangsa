@@ -29,17 +29,7 @@ import SponsorsSection from "@/components/homepage/sponsors-section.astro"
 </Layout>
 
 <script>
-  import { gsap } from "@/lib/gsap"
+  import { initSectionAnimations } from "@/components/animation-modules/section"
 
-  function initAnimation() {
-    const header = document.querySelector("[data-app-navigation]")
-
-    gsap.from(header, {
-      delay: 1,
-      yPercent: -100,
-      ease: "power3.out",
-    })
-  }
-
-  initAnimation()
+  document.fonts.ready.then(() => initSectionAnimations())
 </script>
